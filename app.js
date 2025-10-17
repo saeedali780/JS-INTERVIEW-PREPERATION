@@ -9,13 +9,22 @@
 
 // Example of function hoisting
 
-myFunc()
+// myFunc()
 
-var myFunc = function() {
-    console.log("Fisrt");
-}
-myFunc();
-function myFunc() {
-    console.log("Second");
-}
-myFunc();
+// var myFunc = function() {
+//     console.log("Fisrt");
+// }
+// myFunc();
+// function myFunc() {
+//     console.log("Second");
+// }
+// myFunc();
+
+var variable = 5;
+console.log(variable);
+
+(() => {
+  console.log(variable);
+  variable = 10;
+})();
+console.log(variable);
