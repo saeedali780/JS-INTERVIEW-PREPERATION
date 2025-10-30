@@ -90,9 +90,9 @@
 // fn(); // saeed
 // setTimeout(saeed.getName.bind(saeed), 3 * 1000); // undefined
 
-const obj = {
-  height: 10,
-}
+const obj = Object.create({
+  height: 10
+}) 
 
 console.log(obj.height);
 
