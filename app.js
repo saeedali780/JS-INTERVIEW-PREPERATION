@@ -33,30 +33,47 @@
 //   setTimeout(() => {console.log(i);}, 0)
 // }
 
-var fullName = "John Doe";
+// var fullName = "John Doe";
 
-var obj = {
-  fullName: "Colin Ihrig",
-  prop: {
-    fullName: "Aurelio De Rosa",
-    getFullName: function() {
-      return this.fullName;
-    }
-  },
-  getFullName: function() {
-    return this.fullName;
-  },
+// var obj = {
+//   fullName: "Colin Ihrig",
+//   prop: {
+//     fullName: "Aurelio De Rosa",
+//     getFullName: function() {
+//       return this.fullName;
+//     }
+//   },
+//   getFullName: function() {
+//     return this.fullName;
+//   },
 
-  getFullName2: () => {
-    return this.fullName;
-  },
+//   getFullName2: () => {
+//     return this.fullName;
+//   },
 
-  getFullName3: (function() {
-    return this.fullName
+//   getFullName3: (function() {
+//     return this.fullName
   
-})(),
-};
-console.log(obj.prop.getFullName());
-console.log(obj.getFullName());
-console.log(obj.getFullName2());
-console.log(obj.getFullName3);
+// })(),
+// };
+// console.log(obj.prop.getFullName());
+// console.log(obj.getFullName());
+// console.log(obj.getFullName2());
+// console.log(obj.getFullName3);
+
+const saeed ={
+  name:"saeed",
+  getName: function(){
+    console.log(this.name);
+  },
+}
+
+const ali = {
+  name:"ali",
+  getName: function(){
+    console.log(this.name);
+  },
+}
+
+ali.getName.call(saeed); // saeed
+saeed.getName.call(ali); // ali
