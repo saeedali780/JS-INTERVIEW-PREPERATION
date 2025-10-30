@@ -29,6 +29,34 @@
 // })();
 // console.log(variable);
 
-for(var i=0;i<10;i++){
-  setTimeout(() => {console.log(i);}, 0)
-}
+// for(var i=0;i<10;i++){
+//   setTimeout(() => {console.log(i);}, 0)
+// }
+
+var fullName = "John Doe";
+
+var obj = {
+  fullName: "Colin Ihrig",
+  prop: {
+    fullName: "Aurelio De Rosa",
+    getFullName: function() {
+      return this.fullName;
+    }
+  },
+  getFullName: function() {
+    return this.fullName;
+  },
+
+  getFullName2: () => {
+    return this.fullName;
+  },
+
+  getFullName3: (function() {
+    return this.fullName
+  
+})(),
+};
+console.log(obj.prop.getFullName());
+console.log(obj.getFullName());
+console.log(obj.getFullName2());
+console.log(obj.getFullName3);
