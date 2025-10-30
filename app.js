@@ -20,11 +20,15 @@
 // }
 // myFunc();
 
-var variable = 5;
-console.log(variable);
+// var variable = 5;
+// console.log(variable);
 
-(() => {
-  console.log(variable);
-  variable = 10;
-})();
-console.log(variable);
+// (() => {
+//   console.log(variable);
+//   variable = 10;
+// })();
+// console.log(variable);
+
+for(var i=0;i<10;i++){
+  setTimeout(() => {console.log(i);}, 0)
+}
