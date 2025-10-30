@@ -61,19 +61,31 @@
 // console.log(obj.getFullName2());
 // console.log(obj.getFullName3);
 
-const saeed ={
-  name:"saeed",
-  getName: function(){
-    console.log(this.name);
-  },
-}
+// const saeed ={
+//   name:"saeed",
+//   getName: function(){
+//     console.log(this.name);
+//   },
+// }
 
-const ali = {
-  name:"ali",
-  getName: function(){
-    console.log(this.name);
-  },
-}
+// const ali = {
+//   name:"ali",
+//   getName: function(){
+//     console.log(this.name);
+//   },
+// }
 
-ali.getName.call(saeed); // saeed
-saeed.getName.call(ali); // ali
+// ali.getName.call(saeed); // saeed
+// saeed.getName.call(ali); // ali
+
+// const saeed = {
+//   name:"saeed",
+//   getName: function(){
+//     console.log(this.name);
+//   },
+// }
+
+// const fn = saeed.getName.bind(saeed);
+// fn(); // saeed
+// fn(); // saeed
+// setTimeout(saeed.getName.bind(saeed), 3 * 1000); // undefined
