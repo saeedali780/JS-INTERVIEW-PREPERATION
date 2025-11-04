@@ -169,17 +169,32 @@
 
 // Polyfill for filter
 
-Array.prototype.myFilter = function(callback){
-  const result = [];
-  for(let i=0;i<this.length;i++){
-    if(callback(this[i],i,this)){
-      result.push(this[i]);
-    }
-  }
-  return result;
-}
+// Array.prototype.myFilter = function(callback){
+//   const result = [];
+//   for(let i=0;i<this.length;i++){
+//     if(callback(this[i],i,this)){
+//       result.push(this[i]);
+//     }
+//   }
+//   return result;
+// }
 
-const nums = [1,2,3,4,5];
+// const nums = [1,2,3,4,5];
 
-const evenNums = nums.myFilter((num) => num % 2 === 0);
-console.log(evenNums);
+// const evenNums = nums.myFilter((num) => num % 2 === 0);
+// console.log(evenNums);
+
+
+// Polyfill for reduce
+
+// Array.prototype.myReduce = function(callback, initialValue){
+//   let accumulator = initialValue === undefined ? this[0] : initialValue;
+//   let startIndex = initialValue === undefined ? 1 : 0;
+//   for(let i=startIndex;i<this.length;i++){
+//     accumulator = callback(accumulator, this[i], i, this);
+//   }
+//   return accumulator;
+// }
+// const nums = [1,2,3,4,5];
+// const sum = nums.myReduce((acc,curr) => acc + curr, 0);
+// console.log(sum);
