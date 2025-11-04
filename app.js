@@ -118,12 +118,19 @@
 // console.log(b); // Error: b is not defined
 // console.log(c); // Error: c is not defined
 
-function test(){
-  let a = "Hello";
-  if(true){
-    let a = "Hi";
-    console.log(a);
-  }
-  console.log(a);
-}
-test();
+// function test(){
+//   let a = "Hello";
+//   if(true){
+//     let a = "Hi";
+//     console.log(a);
+//   }
+//   console.log(a);
+// }
+// test();
+
+
+// const nums = [1,2,3,4,5];
+
+// multiplyByTwo = nums.map((num) => num * 2);
+
+// console.log(multiplyByTwo);
