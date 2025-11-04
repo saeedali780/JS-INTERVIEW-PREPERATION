@@ -90,11 +90,30 @@
 // fn(); // saeed
 // setTimeout(saeed.getName.bind(saeed), 3 * 1000); // undefined
 
-const obj = Object.create({
-  height: 10
-}) 
+// const obj = Object.create({
+//   height: 10
+// }) 
 
-console.log(obj.height);
+// console.log(obj.height);
 
-delete obj.height;
-console.log(obj.height);
+// delete obj.height;
+// console.log(obj.height);
+
+//scopes 
+
+var a = 1;
+
+function outer() {
+  var b = 2;  
+  function inner() {
+    var c = 3;  
+    console.log(a);
+    console.log(b);
+    console.log(c);
+  }
+  inner();
+}
+outer();
+console.log(a);
+// console.log(b); // Error: b is not defined
+// console.log(c); // Error: c is not defined
