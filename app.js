@@ -135,8 +135,16 @@
 
 // console.log(multiplyByTwo);
 
-const nums = [1,2,3,4,5];
+// const nums = [1,2,3,4,5];
 
-const evenNums = nums.filter((num) => num % 2 === 0);
+// const evenNums = nums.filter((num) => num % 2 === 0);
 
-console.log(evenNums);
+// console.log(evenNums);
+
+// const nums = [1,2,3,4,5];
+
+// const sum = nums.reduce((acc,curr)=>{
+//   return acc + curr;
+// })
+
+// console.log(sum);
