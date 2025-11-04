@@ -201,17 +201,78 @@
 
 // Map vs ForEach 
 
-const nums = [1,2,3,4,5];
-const mapResult = nums.map((num) =>{
-  return num * 2;
-} 
-).filter((num) => {
-  return num > 5;
-});
+// const nums = [1,2,3,4,5];
+// const mapResult = nums.map((num) =>{
+//   return num * 2;
+// } 
+// ).filter((num) => {
+//   return num > 5;
+// });
 
-console.log("Map Result:", mapResult);
+// console.log("Map Result:", mapResult);
 
-nums.forEach((num, index, arr) => {
-  arr[index] = num * 2;
-});
-console.log("ForEach Result:", nums);
+// nums.forEach((num, index, arr) => {
+//   arr[index] = num * 2;
+// });
+// console.log("ForEach Result:", nums);
+
+// get names in uppercase from array of student objects
+
+let students = [
+  { name: "Alice", age: 20, grade: 85 },
+  { name: "Bob", age: 22, grade: 90 },
+  { name: "Charlie", age: 19, grade: 58 },
+  { name: "David", age: 21, grade: 92 },
+  { name: "Eve", age: 20, grade: 36 }
+];
+
+
+//Simple for loop to get names in uppercase
+// let names = [];
+// for(let i=0;i<students.length;i++){
+//   names.push(students[i].name.toUpperCase());
+// }
+// console.log(names);
+
+//Using map to get names in uppercase
+
+// let studentNames = students.map((student)=>{
+//   return student.name.toUpperCase();
+// });
+// console.log(studentNames);
+
+//  return only details of those who got 80 grade
+
+// let topStudents = students.filter((student)=>{
+//   return student.grade > 80;
+// });
+// console.log(topStudents);
+
+// get total age of all students
+
+// let totalage = students.reduce((acc, student)=>{
+//   return acc + student.age;
+// }, 0);
+
+// console.log(totalage);
+
+// get names of students who got more than 80 grade in 
+
+// let topStudentNames = students
+//   .filter((student) => student.grade > 80)
+//   .map((student) => student.name);
+
+// console.log(topStudentNames);
+
+// Return total marks for students with greater than 60 
+// after 20 marks have been added to who scored less than 60
+
+// let totalMarks = students.map((student)=>{
+//   if(student.grade < 60){
+//     student.grade += 20;
+//   }
+//   return student;
+// })
+// .filter((student) => student.grade > 60)
+// .reduce((acc, student) => acc + student.grade, 0);
+// console.log(totalMarks);
