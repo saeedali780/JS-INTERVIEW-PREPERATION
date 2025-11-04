@@ -198,3 +198,20 @@
 // const nums = [1,2,3,4,5];
 // const sum = nums.myReduce((acc,curr) => acc + curr, 0);
 // console.log(sum);
+
+// Map vs ForEach 
+
+const nums = [1,2,3,4,5];
+const mapResult = nums.map((num) =>{
+  return num * 2;
+} 
+).filter((num) => {
+  return num > 5;
+});
+
+console.log("Map Result:", mapResult);
+
+nums.forEach((num, index, arr) => {
+  arr[index] = num * 2;
+});
+console.log("ForEach Result:", nums);
