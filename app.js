@@ -154,15 +154,32 @@
 
 // Polyfill for map
 
-Array.prototype.myMap = function(callback){
+// Array.prototype.myMap = function(callback){
+//   const result = [];
+//   for(let i=0;i<this.length;i++){
+//     result.push(callback(this[i],i,this));
+//   }
+//   return result;
+// } 
+
+// const nums = [1,2,3,4,5];
+
+// const multiplyByTwo = nums.myMap((num) => num * 2);
+// console.log(multiplyByTwo);
+
+// Polyfill for filter
+
+Array.prototype.myFilter = function(callback){
   const result = [];
   for(let i=0;i<this.length;i++){
-    result.push(callback(this[i],i,this));
+    if(callback(this[i],i,this)){
+      result.push(this[i]);
+    }
   }
   return result;
-} 
+}
 
 const nums = [1,2,3,4,5];
 
-const multiplyByTwo = nums.myMap((num) => num * 2);
-console.log(multiplyByTwo);
+const evenNums = nums.myFilter((num) => num % 2 === 0);
+console.log(evenNums);
