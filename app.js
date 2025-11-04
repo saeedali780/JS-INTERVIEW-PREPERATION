@@ -134,3 +134,9 @@
 // multiplyByTwo = nums.map((num) => num * 2);
 
 // console.log(multiplyByTwo);
+
+const nums = [1,2,3,4,5];
+
+const evenNums = nums.filter((num) => num % 2 === 0);
+
+console.log(evenNums);
