@@ -101,19 +101,29 @@
 
 //scopes 
 
-var a = 1;
+// var a = 1;
 
-function outer() {
-  var b = 2;  
-  function inner() {
-    var c = 3;  
-    console.log(a);
-    console.log(b);
-    console.log(c);
-  }
-  inner();
-}
-outer();
-console.log(a);
+// function outer() {
+//   var b = 2;  
+//   function inner() {
+//     var c = 3;  
+//     console.log(a);
+//     console.log(b);
+//     console.log(c);
+//   }
+//   inner();
+// }
+// outer();
+// console.log(a);
 // console.log(b); // Error: b is not defined
 // console.log(c); // Error: c is not defined
+
+function test(){
+  let a = "Hello";
+  if(true){
+    let a = "Hi";
+    console.log(a);
+  }
+  console.log(a);
+}
+test();
