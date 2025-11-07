@@ -390,3 +390,44 @@ let students = [
 //   callback(name);
 // }
 // processUserInput(greet); // Output: Hello, Saeed!
+
+// Arrow Functions vs Regular Functions
+
+// Arrow Function
+// const add = (a, b) => a + b;
+// console.log(add(2, 3)); // Output: 5
+
+// // Regular Function
+// function multiply(a, b) {
+//   return a * b;
+// }
+// console.log(multiply(2, 3)); // Output: 6
+
+// Differences:
+// 1. Syntax: Arrow functions have a shorter syntax compared to regular functions.
+// 2. 'this' Binding: Arrow functions do not have their own 'this' context; they inherit 'this' from the surrounding lexical scope. Regular functions have their own 'this' context.
+// 3. 'arguments' Object: Regular functions have access to the 'arguments' object, while arrow functions do not.
+// 4. Constructor: Regular functions can be used as constructors with the 'new' keyword, while arrow functions cannot.
+// 5. Implicit Return: Arrow functions can have an implicit return when there is no block body, while regular functions always require an explicit return statement.
+
+// Example demonstrating 'this' binding difference
+// const obj = {
+//   value: 10,
+//   regularFunction: function() {
+//     console.log(this.value); // 'this' refers to obj
+//   },
+//   arrowFunction: () => {
+//     console.log(this.value); // 'this' refers to the surrounding scope (not obj)
+//   }
+// };
+
+// obj.regularFunction();
+// obj.arrowFunction();
+
+// function  func(){
+//   console.log(arguments);
+//   for(let i=0;i<arguments.length;i++){
+//     console.log(arguments[i]);
+//   }
+// }
+// func(1,2,3,4);
