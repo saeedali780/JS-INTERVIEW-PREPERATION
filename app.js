@@ -367,3 +367,9 @@ let students = [
 //     var x = 20;
 // }
 // fun();
+// Params vs Arguments
+function multiply(...args) {
+  return args[0] * args[1];
+}
+let arr = [2, 3];
+console.log(multiply(...arr));
