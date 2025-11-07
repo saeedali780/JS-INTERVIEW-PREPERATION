@@ -294,7 +294,7 @@ let students = [
 
 // What are first-class functions in JavaScript?
 
-// First-class functions mean that functions in JavaScript are treated as first-class citizens. \
+// First-class functions mean that functions in JavaScript are treated as first-class citizens.
 // This means that functions can be assigned to variables, passed as arguments to other functions,
 //  and returned from other functions.
 
