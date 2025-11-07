@@ -368,8 +368,25 @@ let students = [
 // }
 // fun();
 // Params vs Arguments
-function multiply(...args) {
-  return args[0] * args[1];
-}
-let arr = [2, 3];
-console.log(multiply(...arr));
+// function multiply(...args) {
+//   return args[0] * args[1];
+// }
+// let arr = [2, 3];
+// console.log(multiply(...arr));
+
+
+// What are Callback Functions in JavaScript? Explain with an example.
+
+// A callback function is a function that is passed into another function as an argument and is executed after some operation has been completed. 
+// Callbacks are commonly used for asynchronous operations such as handling events, making API calls, or reading files.
+
+// Example:
+
+// function greet(name) {
+//   console.log(`Hello, ${name}!`);
+// }
+// function processUserInput(callback) {
+//   const name = "Saeed";
+//   callback(name);
+// }
+// processUserInput(greet); // Output: Hello, Saeed!
