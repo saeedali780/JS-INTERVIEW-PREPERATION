@@ -281,13 +281,43 @@ let students = [
 // Q1 What is Function Declaration and Function Expression in JavaScript? Explain with examples.
 
 // Function Declaration
-function add(a, b) {
-  return a + b;
-}
-console.log(add(2, 3)); // Output: 5
+// function add(a, b) {
+//   return a + b;
+// }
+// console.log(add(2, 3)); // Output: 5
 
-// Function Expression
-const multiply = function(a, b) {
-  return a * b;
+// // Function Expression
+// const multiply = function(a, b) {
+//   return a * b;
+// }
+// console.log(multiply(2, 3)); // Output: 6
+
+// What are first-class functions in JavaScript?
+
+// First-class functions mean that functions in JavaScript are treated as first-class citizens. \
+// This means that functions can be assigned to variables, passed as arguments to other functions,
+//  and returned from other functions.
+
+// Example:
+
+// // Assigning function to a variable
+const greet = function(name) {
+  return `Hello, ${name}!`;
 }
-console.log(multiply(2, 3)); // Output: 6
+console.log(greet("Alice")); // Output: Hello, Alice!
+
+// // Passing function as an argument
+function processUserInput(callback) {
+  const name = "Bob";
+  console.log(callback(name));
+}
+processUserInput(greet); // Output: Hello, Bob!
+
+// // Returning function from another function
+function makeMultiplier(factor) {
+  return function(number) {
+    return number * factor;
+  }
+}
+const double = makeMultiplier(2);
+console.log(double(5)); // Output: 10
