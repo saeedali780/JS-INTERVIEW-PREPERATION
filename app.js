@@ -276,3 +276,18 @@ let students = [
 // .filter((student) => student.grade > 60)
 // .reduce((acc, student) => acc + student.grade, 0);
 // console.log(totalMarks);
+
+// Functions
+// Q1 What is Function Declaration and Function Expression in JavaScript? Explain with examples.
+
+// Function Declaration
+function add(a, b) {
+  return a + b;
+}
+console.log(add(2, 3)); // Output: 5
+
+// Function Expression
+const multiply = function(a, b) {
+  return a * b;
+}
+console.log(multiply(2, 3)); // Output: 6
