@@ -301,23 +301,69 @@ let students = [
 // Example:
 
 // // Assigning function to a variable
-const greet = function(name) {
-  return `Hello, ${name}!`;
-}
-console.log(greet("Alice")); // Output: Hello, Alice!
+// const greet = function(name) {
+//   return `Hello, ${name}!`;
+// }
+// console.log(greet("Alice")); // Output: Hello, Alice!
 
-// // Passing function as an argument
-function processUserInput(callback) {
-  const name = "Bob";
-  console.log(callback(name));
-}
-processUserInput(greet); // Output: Hello, Bob!
+// // // Passing function as an argument
+// function processUserInput(callback) {
+//   const name = "Bob";
+//   console.log(callback(name));
+// }
+// processUserInput(greet); // Output: Hello, Bob!
 
-// // Returning function from another function
-function makeMultiplier(factor) {
-  return function(number) {
-    return number * factor;
-  }
-}
-const double = makeMultiplier(2);
-console.log(double(5)); // Output: 10
+// // // Returning function from another function
+// function makeMultiplier(factor) {
+//   return function(number) {
+//     return number * factor;
+//   }
+// }
+// const double = makeMultiplier(2);
+// console.log(double(5)); // Output: 10
+
+// What is IFFE (Immediately Invoked Function Expression) in JavaScript? Provide an example of its usage.
+
+// IIFE (Immediately Invoked Function Expression) is a JavaScript function that runs as soon as it is defined. 
+// It is a design pattern which is also known as a Self-Executing Anonymous Function and contains two major parts:
+// 1. The first is the anonymous function with lexical scope enclosed within the Grouping Operator ().
+// 2. The second part creates the immediately invoked function expression () through which the JavaScript engine will directly interpret the function.
+// Example:
+
+// (function() {
+//   console.log("This is an IIFE!");
+// })(); // Output: This is an IIFE!
+
+// O/P BASED QUESTIONS
+
+// What will be the output of the following code snippet?
+
+// (function(x) {
+//   return (function(y){
+//     console.log(x);
+//   }(2))  
+// })(1);
+
+// for(var i=0;i<3;i++){
+//   setTimeout(() => {
+//     console.log(i);
+//   }, i *  1000)};
+
+// Function Hoisting
+
+// console.log(myFunc());
+
+// function myFunc() {
+//   return "Hello, World!";
+// }
+
+// console.log(myVar);
+// var myVar = "JavaScript Hoisting";
+
+// var x = 21
+
+// var fun = function() {
+//     console.log(x);
+//     var x = 20;
+// }
+// fun();
