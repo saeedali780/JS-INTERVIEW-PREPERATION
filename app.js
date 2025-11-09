@@ -218,13 +218,13 @@
 
 // get names in uppercase from array of student objects
 
-let students = [
-  { name: "Alice", age: 20, grade: 85 },
-  { name: "Bob", age: 22, grade: 90 },
-  { name: "Charlie", age: 19, grade: 58 },
-  { name: "David", age: 21, grade: 92 },
-  { name: "Eve", age: 20, grade: 36 }
-];
+// let students = [
+//   { name: "Alice", age: 20, grade: 85 },
+//   { name: "Bob", age: 22, grade: 90 },
+//   { name: "Charlie", age: 19, grade: 58 },
+//   { name: "David", age: 21, grade: 92 },
+//   { name: "Eve", age: 20, grade: 36 }
+// ];
 
 
 //Simple for loop to get names in uppercase
@@ -431,3 +431,82 @@ let students = [
 //   }
 // }
 // func(1,2,3,4);
+
+// Clousures in JavaScript
+// A closure is a feature in JavaScript where an inner function has access to the outer (enclosing)
+//  function's variables and parameters, even after the outer function has returned. 
+// Closures allow functions to retain access to their lexical scope, enabling data privacy and 
+// encapsulation.
+
+// Example of Closure:
+
+// function outerFunction(outerVariable) {
+//   return function innerFunction(innerVariable) {
+//     console.log('Outer Variable:', outerVariable);
+//     console.log('Inner Variable:', innerVariable);
+//   };
+// }
+// const newFunction = outerFunction('outside');
+// newFunction('inside');
+// Output:
+// Outer Variable: outside
+// Inner Variable: inside
+
+// Example of Closure for Data Privacy:
+
+// function createCounter() {
+//   let count = 0; // private variable
+//   return function() {
+//     count++;
+//     return count;
+//   };
+// }
+// const counter = createCounter();
+// console.log(counter()); // Output: 1
+// console.log(counter()); // Output: 2
+// console.log(counter()); // Output: 3
+
+// function outer(){
+//   var username = "Saeed";
+//   function inner(){
+//     console.log("Hello " + username);
+//   }
+//   inner();
+// }
+// outer();
+
+//Clousures Scope Chain
+
+// var e = 10;
+// function sum(a){
+//   return function(b){
+//     return function(c){
+//       return function(d){
+//         return a + e + b + c + d;
+//       }
+//   }
+// }
+// }
+// console.log(sum(1)(20)(30)(40)); //101
+
+// Output based questions
+
+// What will be the output of the following code snippet?
+
+// let count = 0;
+// (function immediate() {
+//   if (count === 0) {
+//     let count = 1;
+//     console.log(count); // What is logged here?
+//   }
+//   console.log(count); // What is logged here?
+// })();
+
+// function createBase(num) {
+//   return function (inner) {
+//     return num + inner;
+//   };
+// }
+// const addSix = createBase(6);
+// console.log(addSix(10));; // What is the output?
+// console.log(addSix(21));; // What is the output?
