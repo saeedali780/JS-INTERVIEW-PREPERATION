@@ -510,3 +510,13 @@
 // const addSix = createBase(6);
 // console.log(addSix(10));; // What is the output?
 // console.log(addSix(21));; // What is the output?
+
+
+function a(){
+    for(let i = 0;i<3;i++){
+        setTimeout(() => {
+            console.log(i);
+        }, i * 1000);
+    }
+}
+a();
