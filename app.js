@@ -511,7 +511,7 @@
 // console.log(addSix(10));; // What is the output?
 // console.log(addSix(21));; // What is the output?
 
-
+// Tricky question SetTimeout with loop
 function a(){
     for(let i = 0;i<3;i++){
         setTimeout(() => {
