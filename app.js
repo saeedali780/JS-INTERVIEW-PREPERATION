@@ -512,11 +512,25 @@
 // console.log(addSix(21));; // What is the output?
 
 // Tricky question SetTimeout with loop
-function a(){
-    for(let i = 0;i<3;i++){
-        setTimeout(() => {
-            console.log(i);
-        }, i * 1000);
-    }
+//  for(var i = 0;i<3;i++){
+//        function inner(i){
+//          setTimeout(() => {
+//            console.log(i);
+//          }, i * 1000);
+//          }
+//          inner(i);
+// }
+
+// console.log(null == undefined);
+// console.log([]+[[]] + [] + !false);
+// console.log([] + false - null + true);
+// console.log(typeof(NaN));
+// console.log([] + 1 + 2);
+// console.log("b" + "a" + + "a" + "a");
+// console.log("1"[0]);
+
+function a() {
+    console.log(b);
 }
-a();
+var b = "Hello";
+a() 
