@@ -558,3 +558,23 @@
 // }
 // const newArray = map(numbers, incrementByIndex);
 // console.log(newArray); // Output: [5, 11, 17] 
+
+//2. Capitalize Strings
+// "Given an array of lowercase strings, return a new array where the first letter of 
+// each string is capitalized. How would you implement it without using map?"
+// Example: ["apple", "banana"] → ["Apple", "Banana"]
+
+const strings = ["apple", "banana"];
+
+var map = (arr,fn) => {
+    const result = [];
+    for(let i=0;i<arr.length;i++){
+        result.push(fn(arr[i],i));
+    }
+    return result;
+}
+function capitalizeFirstLetter(str){
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
+const capitalizedArray = map(strings, capitalizeFirstLetter);
+console.log(capitalizedArray); // Output: ["Apple", "Banana"]
