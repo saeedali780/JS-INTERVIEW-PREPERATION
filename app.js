@@ -583,7 +583,28 @@
 //  unchanged in a new array. How will you do it without map?"
 // Example: [1, 2, 3, 4] → [2, 2, 6, 4]
 
-const numbers = [1, 2, 3, 4];
+// const numbers = [1, 2, 3, 4];
+// var map = (arr,fn) => {
+//     const result = [];
+//     for(let i=0;i<arr.length;i++){
+//         result.push(fn(arr[i],i));
+//     }
+//     return result;
+// }
+// function doubleOddNumbers(num){
+//     if(num % 2 !== 0){
+//         return num * 2;
+//     }
+//     return num;
+// }
+// const transformedArray = map(numbers, doubleOddNumbers);
+// console.log(transformedArray); // Output: [2, 2, 6, 4]
+
+//4. Type Conversion
+// "Given an array containing numbers and strings, return a new array where numbers are 
+// converted to strings and strings are converted to numbers, if possible."
+
+const mixedArray = [1, "2", 3, "four", "5"];
 var map = (arr,fn) => {
     const result = [];
     for(let i=0;i<arr.length;i++){
@@ -591,11 +612,13 @@ var map = (arr,fn) => {
     }
     return result;
 }
-function doubleOddNumbers(num){
-    if(num % 2 !== 0){
-        return num * 2;
+function convertTypes(value){
+    if(typeof value === "number"){
+        return value.toString();
+    } else if(!isNaN(Number(value))){
+        return Number(value);
     }
-    return num;
+    return value;
 }
-const transformedArray = map(numbers, doubleOddNumbers);
-console.log(transformedArray); // Output: [2, 2, 6, 4]
+const convertedArray = map(mixedArray, convertTypes);
+console.log(convertedArray); // Output: ["1", 2, "3", "four", "5"]
