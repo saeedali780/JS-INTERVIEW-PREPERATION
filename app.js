@@ -527,10 +527,34 @@
 // console.log(typeof(NaN));
 // console.log([] + 1 + 2);
 // console.log("b" + "a" + + "a" + "a");
-// console.log("1"[0]);
+// // console.log("1"[0]);
 
-function a() {
-    console.log(b);
-}
-var b = "Hello";
-a() 
+// let obj1 = { x: 10 };
+// let obj2 = obj1; 
+// obj2.x = 20;
+
+// console.log(obj1.x); // 20 (original object changed)
+
+// Task related to map,fileter,reduce
+
+// Map Tasks
+
+//1. Increment by Index
+// "You are given an array of numbers. Can you create a function that returns 
+// a new array where each element is increased by its index?"
+// Example: [5, 10, 15] → [5+0, 10+1, 15+2] → [5, 11, 17]
+
+// const numbers = [5, 10, 15];
+
+// var map = (arr,fn) => {
+//     const result = [];
+//     for(let i=0;i<arr.length;i++){
+//         result.push(fn(arr[i],i));
+//     }
+//     return result;
+// }
+// function incrementByIndex(num, index){
+//     return num + index;
+// }
+// const newArray = map(numbers, incrementByIndex);
+// console.log(newArray); // Output: [5, 11, 17] 
