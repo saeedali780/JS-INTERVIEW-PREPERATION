@@ -564,8 +564,26 @@
 // each string is capitalized. How would you implement it without using map?"
 // Example: ["apple", "banana"] → ["Apple", "Banana"]
 
-const strings = ["apple", "banana"];
+// const strings = ["apple", "banana"];
+// var map = (arr,fn) => {
+//     const result = [];
+//     for(let i=0;i<arr.length;i++){
+//         result.push(fn(arr[i],i));
+//     }
+//     return result;
+// }
+// function capitalizeFirstLetter(str){
+//     return str.charAt(0).toUpperCase() + str.slice(1);
+// }
+// const capitalizedArray = map(strings, capitalizeFirstLetter);
+// console.log(capitalizedArray); // Output: ["Apple", "Banana"]
 
+//3. Conditional Transformation
+// "Create a function that doubles odd numbers but leaves even numbers
+//  unchanged in a new array. How will you do it without map?"
+// Example: [1, 2, 3, 4] → [2, 2, 6, 4]
+
+const numbers = [1, 2, 3, 4];
 var map = (arr,fn) => {
     const result = [];
     for(let i=0;i<arr.length;i++){
@@ -573,8 +591,11 @@ var map = (arr,fn) => {
     }
     return result;
 }
-function capitalizeFirstLetter(str){
-    return str.charAt(0).toUpperCase() + str.slice(1);
+function doubleOddNumbers(num){
+    if(num % 2 !== 0){
+        return num * 2;
+    }
+    return num;
 }
-const capitalizedArray = map(strings, capitalizeFirstLetter);
-console.log(capitalizedArray); // Output: ["Apple", "Banana"]
+const transformedArray = map(numbers, doubleOddNumbers);
+console.log(transformedArray); // Output: [2, 2, 6, 4]
