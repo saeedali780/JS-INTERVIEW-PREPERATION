@@ -604,21 +604,43 @@
 // "Given an array containing numbers and strings, return a new array where numbers are 
 // converted to strings and strings are converted to numbers, if possible."
 
-const mixedArray = [1, "2", 3, "four", "5"];
-var map = (arr,fn) => {
-    const result = [];
-    for(let i=0;i<arr.length;i++){
-        result.push(fn(arr[i],i));
-    }
-    return result;
-}
-function convertTypes(value){
-    if(typeof value === "number"){
-        return value.toString();
-    } else if(!isNaN(Number(value))){
-        return Number(value);
-    }
-    return value;
-}
-const convertedArray = map(mixedArray, convertTypes);
-console.log(convertedArray); // Output: ["1", 2, "3", "four", "5"]
+// const mixedArray = [1, "2", 3, "four", "5"];
+// var map = (arr,fn) => {
+//     const result = [];
+//     for(let i=0;i<arr.length;i++){
+//         result.push(fn(arr[i],i));
+//     }
+//     return result;
+// }
+// function convertTypes(value){
+//     if(typeof value === "number"){
+//         return value.toString();
+//     } else if(!isNaN(Number(value))){
+//         return Number(value);
+//     }
+//     return value;
+// }
+// const convertedArray = map(mixedArray, convertTypes);
+// console.log(convertedArray); // Output: ["1", 2, "3", "four", "5"]
+
+// Custom Filter Questions
+//1. Filter by Condition
+// "Given an array of numbers, return a new array containing only numbers greater than 10.
+//  How will you implement this without using filter?"
+
+// const numbers = [5, 12, 8, 20, 3];
+
+// var filter = (arr,fn) => {
+//     const result = [];
+//     for(let i=0;i<arr.length;i++){
+//         if(fn(arr[i],i)){
+//             result.push(arr[i]);
+//         }
+//     }
+//     return result;
+//     }
+// function isGreaterThanTen(num){
+//     return num > 10;
+// }
+// const filteredArray = filter(numbers, isGreaterThanTen);
+// console.log(filteredArray); // Output: [12, 20]
