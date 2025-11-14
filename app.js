@@ -670,7 +670,49 @@
 // "How would you return elements that are located at even indexes in an array?"
 // Example: [5, 10, 15, 20] → [5, 15]
 
-const numbers = [5, 10, 15, 20];
+// const numbers = [5, 10, 15, 20];
+
+// var filter = (arr,fn) => {
+//     const result = [];
+//     for(let i=0;i<arr.length;i++){
+//         if(fn(arr[i],i)){
+//             result.push(arr[i]);
+//         }
+//     }
+//     return result;
+// }
+// function isEvenIndex(num, index){
+//     return index % 2 === 0;
+// }
+// const evenIndexElements = filter(numbers, isEvenIndex);
+// console.log(evenIndexElements); // Output: [5, 15]
+
+//4. Truthy Values Only
+// "Given an array that contains 0, null, '', undefined, 5, 'hello', 
+// how would you return a filtered array containing only truthy values without using filter?"
+
+// const mixedArray = [0, null, '', undefined, 5, 'hello',true];
+
+// var filter = (arr,fn) => {
+//     const result = [];
+//     for(let i=0;i<arr.length;i++){
+//         if(fn(arr[i],i)){
+//             result.push(arr[i]);
+//         }
+//     }
+//     return result;
+// }
+// function isTruthy(value){
+//     return Boolean(value);
+// }
+// const truthyValues = filter(mixedArray, isTruthy);
+// console.log(truthyValues); // Output: [5, 'hello',true]
+
+//5. Custom Callback Filtering
+// "Suppose you have a function isPrime(num) provided. How would you create a custom filter 
+// function that returns only prime numbers from an array using this callback?"
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 var filter = (arr,fn) => {
     const result = [];
@@ -681,8 +723,14 @@ var filter = (arr,fn) => {
     }
     return result;
 }
-function isEvenIndex(num, index){
-    return index % 2 === 0;
+function isPrime(num){
+    if(num <= 1) return false;
+    for(let i=2;i<=Math.sqrt(num);i++){
+        if(num % i === 0){
+            return false;
+        }
+    }
+    return true;
 }
-const evenIndexElements = filter(numbers, isEvenIndex);
-console.log(evenIndexElements); // Output: [5, 15]
+const primeNumbers = filter(numbers, isPrime);
+console.log(primeNumbers); // Output: [2, 3, 5, 7]
