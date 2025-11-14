@@ -12,4 +12,11 @@ function testScope() {
     console.log(functionVar); // Accessible here
     // console.log(innerBlockLet); // Unaccessible here, would throw an error
 }
+testScope();
+console.log(globalVar); // Accessible here
+// console.log(functionVar); // Unaccessible here, would throw an error
+// console.log(blockLet); // Unaccessible here, would throw an error
 
+// Hoisting
+console.log(hoistedVar); // undefined due to hoisting
+var hoistedVar = "I am hoisted";
