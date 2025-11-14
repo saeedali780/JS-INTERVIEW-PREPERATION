@@ -650,7 +650,28 @@
 //  whose length is more than 4 characters."
 // Example: ["cat", "lion", "tiger"] → ["lion", "tiger"]
 
-const words = ["cat", "lion", "tiger"];
+// const words = ["cat", "lion", "tiger"];
+// var filter = (arr,fn) => {
+//     const result = [];
+//     for(let i=0;i<arr.length;i++){
+//         if(fn(arr[i],i)){
+//             result.push(arr[i]);
+//         }
+//     }
+//     return result;
+// }
+// function isLengthMoreThanFour(word){
+//     return word.length > 4;
+// }
+// const longWords = filter(words, isLengthMoreThanFour);
+// console.log(longWords); // Output: ["tiger"]
+
+//3. Even Index Elements
+// "How would you return elements that are located at even indexes in an array?"
+// Example: [5, 10, 15, 20] → [5, 15]
+
+const numbers = [5, 10, 15, 20];
+
 var filter = (arr,fn) => {
     const result = [];
     for(let i=0;i<arr.length;i++){
@@ -660,8 +681,8 @@ var filter = (arr,fn) => {
     }
     return result;
 }
-function isLengthMoreThanFour(word){
-    return word.length > 4;
+function isEvenIndex(num, index){
+    return index % 2 === 0;
 }
-const longWords = filter(words, isLengthMoreThanFour);
-console.log(longWords); // Output: ["tiger"]
+const evenIndexElements = filter(numbers, isEvenIndex);
+console.log(evenIndexElements); // Output: [5, 15]
