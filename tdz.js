@@ -1,6 +1,7 @@
 // Temporal dead zone example in JavaScript
 //  defination of a variable using 'let' or 'const' creates a temporal dead zone
-//  from the start of the block until the variable is declared
+// Temporal dead zone is the term to describe the state where variables are in the scope but not yet
+// decleared
 function example() {
     console.log(a); // ReferenceError: Cannot access 'a' before initialization
     let a = 10;
