@@ -61,18 +61,62 @@
 //At the end, it returns one final value.
 
 
-let nums = [1,2,3,4,5];
-let init = 0;
-const reduce = function(nums,fn,init){
-    let acc = init
-    for(let i = 0; i< nums.length;i++){
-        acc = fn(acc,nums[i])
+// let nums = [1,2,3,4,5];
+// let init = 0;
+// const reduce = function(nums,fn,init){
+//     let acc = init
+//     for(let i = 0; i< nums.length;i++){
+//         acc = fn(acc,nums[i])
+//     }
+//     return acc
+// }
+
+// function fn(acc,val){
+//     return acc  + val
+// }
+// let results = reduce(nums, fn, init);
+// console.log(results); 
+
+// output based questions
+
+let students = [
+    {name:"saeed",marks:200,age:18},
+    {name:"ali",marks:100,age:19},
+    {name:"jerry",marks:80,age:20},
+    {name:"khan",marks:60,age:22},
+]
+
+var map = function(arr, fn){
+    let studentss = [];
+    for (let i = 0; i < arr.length; i++) {
+        studentss.push(fn(arr[i]));
     }
-    return acc
+    return studentss;
 }
 
-function fn(acc,val){
-    return acc  + val
+function fn(item){
+    // return full object, name updated
+    return {
+        ...item,
+        name: item.name.charAt(0).toUpperCase() + item.name.slice(1)
+    }
 }
-let results = reduce(nums, fn, init);
-console.log(results); 
+
+let result = map(students, fn)
+
+var filter = function(arr, fn){
+    let filtered = [];
+    for(let i = 0; i < arr.length; i++){
+        if(fn(arr[i])){
+            filtered.push(arr[i])
+        }
+    }
+    return filtered
+}
+
+function fn2(item) {
+    return item.marks >= 100 && item.age >= 18
+}
+
+let results = filter(result, fn2)
+console.log(results);
