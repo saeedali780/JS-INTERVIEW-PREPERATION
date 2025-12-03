@@ -73,3 +73,35 @@
 // console.log(functionsArray[0]()); // Output: Function 1
 // console.log(functionsArray[1]()); // Output: Function 2
 
+// QUESTION 3. What is IIFE function in JavaScript?
+
+// ANSWER:
+// IIFE stands for Immediately Invoked Function Expression. It is a JavaScript function that 
+// is defined and executed immediately after its creation. IIFEs are commonly used to create 
+// a private scope for variables and functions, preventing them from polluting the global scope.
+
+// Example of IIFE:
+// (function() {
+//     var privateVariable = "I am private";
+//     console.log(privateVariable); // Output: I am private
+// })();
+
+// In this example, the function is defined within parentheses and is immediately invoked 
+// using the trailing parentheses. The variable privateVariable is not accessible outside 
+// the IIFE, thus maintaining a clean global scope.
+
+// QUESTION 4. Function hoisting in JavaScript?
+
+// ANSWER:
+// Function hoisting in JavaScript refers to the behavior where function declarations are 
+// moved to the top of their containing scope during the compilation phase. This means that 
+// you can call a function before it is defined in the code.
+
+// Example of Function Hoisting:
+// greet(); // Output: Hello, World!
+// function greet() {
+//     console.log("Hello, World!");
+// }
+
+// In this example, the function greet is called before its declaration, but it still works 
+// because of hoisting.
