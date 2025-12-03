@@ -105,3 +105,33 @@
 
 // In this example, the function greet is called before its declaration, but it still works 
 // because of hoisting.
+
+// QUESTION 5. Params vs Arguments in JavaScript?
+
+// ANSWER:
+// Parameters and arguments are related concepts in JavaScript functions, but they refer to 
+// different things:
+// Parameters: Parameters are the named variables that are defined in a function's declaration. 
+// They act as placeholders for the values that will be passed to the function when it is called.
+// // Example of Parameters:
+// function add(a, b) { // a and b are parameters
+//     return a + b;
+// }
+// // Arguments: Arguments are the actual values that are passed to a function when it is called.
+// // These values correspond to the parameters defined in the function declaration.
+// // Example of Arguments:
+// var result = add(2, 3); // 2 and 3 are arguments
+// console.log(result); // Output: 5
+
+// spread operator & rest operator in functions
+
+// function myFunc(a,...args){ // rest operator
+//     console.log(a,args);
+// }
+// myFunc(1,2,3,4,5)
+
+// function myFunc2(a,b,c){
+//     console.log(a,b,c);
+// }
+// var arr = [1,2,3]
+// myFunc2(...arr) // spread operator
