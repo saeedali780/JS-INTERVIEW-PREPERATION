@@ -218,3 +218,15 @@
 // const obj2 = new ArrowConstructor(); // TypeError: ArrowConstructor is not a constructor
 // console.log(obj2.value);
 
+// QUESTION 8. What is the purpose of the 'return' statement in a function?
+
+// ANSWER:
+// The 'return' statement in a function is used to specify the value that the function
+// should output when it is called. When a function reaches a 'return' statement, it
+// immediately exits the function and sends the specified value back to the caller.
+// If no 'return' statement is present, the function will return 'undefined' by default.
+
+// Example of 'return' statement:
+function multiply(a, b) {
+    return a * b; // The function returns the product of a and b
+}
