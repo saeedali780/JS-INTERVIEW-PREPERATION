@@ -135,3 +135,30 @@
 // }
 // var arr = [1,2,3]
 // myFunc2(...arr) // spread operator
+
+// QUESTION 6. What is callback function in JavaScript?
+
+// ANSWER:
+// A callback function in JavaScript is a function that is passed as an argument to another
+// function and is executed after some operation or event occurs. Callback functions are commonly
+// used for asynchronous operations, such as handling events, making API calls, or performing 
+// tasks that take time to complete.
+
+// Example of Callback Function:
+// function fetchData(callback) {
+//     setTimeout(function() {
+//         var data = "Sample Data";
+//         callback(data); // Execute the callback function with the fetched data
+//     }, 2000); // Simulating a delay of 2 seconds
+// }
+// fetchData(function(data) {
+//     console.log("Data received:", data); // Output: Data received: Sample Data
+// });
+
+// function greet(name){
+//     return function(message){
+//         console.log(`Hello ${name}, ${message}`);
+//     }
+// }
+// var greetJohn = greet("Saeed");
+// greetJohn("Welcome to the team!"); // Output: Hello Saeed, Welcome to the team!
