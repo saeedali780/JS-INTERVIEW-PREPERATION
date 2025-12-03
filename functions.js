@@ -227,6 +227,11 @@
 // If no 'return' statement is present, the function will return 'undefined' by default.
 
 // Example of 'return' statement:
-function multiply(a, b) {
-    return a * b; // The function returns the product of a and b
-}
+// function multiply(a, b) {
+//     return a * b; // The function returns the product of a and b
+// }
+// console.log(multiply(3, 4)); // Output: 12
+
+// In this example, the 'multiply' function takes two parameters 'a' and 'b', calculates
+// their product, and returns the result. When the function is called with arguments 3 and 4,
+// it outputs 12.
