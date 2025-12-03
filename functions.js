@@ -160,5 +160,61 @@
 //         console.log(`Hello ${name}, ${message}`);
 //     }
 // }
-// var greetJohn = greet("Saeed");
-// greetJohn("Welcome to the team!"); // Output: Hello Saeed, Welcome to the team!
+// // var greetJohn = greet("Saeed");
+// // greetJohn("Welcome to the team!"); // Output: Hello Saeed, Welcome to the team!
+
+// greet("Alice")("Good to see you!"); // Output: Hello Alice, Good to see you!
+
+// QUESTION 7. What is the difference between arrow function and regular function in JavaScript?
+
+// ANSWER:
+// Arrow functions and regular functions in JavaScript have several key differences:
+// 1. Syntax: Arrow functions have a more concise syntax compared to regular functions.
+// Example of Arrow Function:
+// const add = (a, b) => a + b;
+// // Example of Regular Function:
+// function add(a, b) {
+//     return a + b;
+// }
+// 2. 'this' Binding: Arrow functions do not have their own 'this' context. Instead, they
+// inherit 'this' from the surrounding lexical scope. Regular functions have their own 'this'
+// context, which can change based on how the function is called.
+// Example:
+// const obj = {
+//     value: 42,
+//     regularFunction: function() {
+//         console.log(this.value); // 'this' refers to obj
+//     },
+//     arrowFunction: () => {
+//         console.log(this.value); // 'this' does not refer to obj
+//     }
+// };
+// obj.regularFunction(); // Output: 42
+// obj.arrowFunction(); // Output: undefined (or error in strict mode)
+// // 3. 'arguments' Object: Regular functions have access to the 'arguments' object, which
+// // contains all the arguments passed to the function. Arrow functions do not have their own
+// // 'arguments' object.
+// // Example: 
+// function regularFunc() {
+//     console.log(arguments); // Accessible
+// }
+// const arrowFunc = () => {
+//     console.log(arguments); // Not accessible
+// }
+// regularFunc(1, 2, 3); // Output: [1, 2, 3]
+// arrowFunc(1, 2, 3); // Output: ReferenceError: arguments is not defined
+// 4. Constructor: Regular functions can be used as constructors with the 'new' keyword,
+// while arrow functions cannot be used as constructors and will throw an error if used
+// with 'new'.
+// Example:
+// function RegularConstructor() {
+//     this.value = 100;
+// }
+// const ArrowConstructor = () => {
+//     this.value = 100;
+// }
+// const obj1 = new RegularConstructor(); // Works
+// console.log(obj1.value);
+// const obj2 = new ArrowConstructor(); // TypeError: ArrowConstructor is not a constructor
+// console.log(obj2.value);
+
