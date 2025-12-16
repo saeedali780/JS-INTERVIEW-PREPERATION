@@ -34,17 +34,31 @@
 //  60 - 69: C
 //  Below 60: F
 
-function stMarks(marks){
-    if(marks >= 90 && marks <= 100){
-        return "A+"
-    }else if(marks >= 80 && marks <= 89){
-         return "A"
-    }else if(marks >= 70 && marks <= 79){
-         return "B"
-    }else if(marks >= 60 && marks <= 69){
-         return "C"
+// function stMarks(marks){
+//     if(marks >= 90 && marks <= 100){
+//         return "A+"
+//     }else if(marks >= 80 && marks <= 89){
+//          return "A"
+//     }else if(marks >= 70 && marks <= 79){
+//          return "B"
+//     }else if(marks >= 60 && marks <= 69){
+//          return "C"
+//     }else{
+//         return "F"
+//     }
+// }
+// console.log(stMarks(10))
+
+// Question 4: Write a program to check if a year is a leap year or not.
+
+function isLeapYear(year){
+    if((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)){
+        return "Leap Year"
     }else{
-        return "F"
+        return "Not a Leap Year"
     }
 }
-console.log(stMarks(10))
+console.log(isLeapYear(2020))  // Leap Year
+console.log(isLeapYear(1900))  // Not a Leap Year
+console.log(isLeapYear(2000))  // Leap Year
+console.log(isLeapYear(2026))  // Not a Leap Year
