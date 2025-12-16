@@ -65,27 +65,49 @@
 
 // Question 5: Write a program to check if a character is a vowel or consonant digit or special character using nested if..else statements.
 
-function checkCharacter(char){
-    if(char.length !== 1){
-        return "Please enter a single character"
+// function checkCharacter(char){
+//     if(char.length !== 1){
+//         return "Please enter a single character"
+//     }else{
+//         if((char >= 'a' && char <= 'z') || (char >= 'A' && char <= 'Z')){
+//             // It's an alphabet
+//             let lowerChar = char.toLowerCase();
+//             if(lowerChar === 'a' || lowerChar === 'e' || lowerChar === 'i' || lowerChar === 'o' || lowerChar === 'u'){
+//                 return "Vowel"
+//             }else{
+//                 return "Consonant"
+//             }
+//         }else if(char >= '0' && char <= '9'){
+//             return "Digit"
+//         }else{
+//             return "Special Character"
+//         }
+//     }
+// }
+// console.log(checkCharacter('a'))  // Vowel
+// console.log(checkCharacter('B'))  // Consonant
+// console.log(checkCharacter('5'))  // Digit
+// console.log(checkCharacter('@'))  // Special Character
+// console.log(checkCharacter('ab')) // Please enter a single character
+
+// Question 6: Write a program that calculates the electricity bill based on units consumed:
+// First 100 : Rs 5 per unit
+// Next 100 : Rs 7 per unit
+// Next 200 : Rs 10 per unit
+// Above 300 : Rs 15 per unit
+
+function calculateBill(unit){
+    let bill = 0
+
+    if(unit <=100){
+        bill = unit * 5
+    }else if(unit<=200){
+        bill = 100 * 5 + (unit - 100) * 7
+    }else if(unit<=300){
+        bill = (100 * 5)  + (100 * 7) + (unit -200) * 10
     }else{
-        if((char >= 'a' && char <= 'z') || (char >= 'A' && char <= 'Z')){
-            // It's an alphabet
-            let lowerChar = char.toLowerCase();
-            if(lowerChar === 'a' || lowerChar === 'e' || lowerChar === 'i' || lowerChar === 'o' || lowerChar === 'u'){
-                return "Vowel"
-            }else{
-                return "Consonant"
-            }
-        }else if(char >= '0' && char <= '9'){
-            return "Digit"
-        }else{
-            return "Special Character"
-        }
+        bill = (100 * 5)  + (100 * 7) + (100 * 10) +  (unit -300) * 15
     }
+    return bill
 }
-console.log(checkCharacter('a'))  // Vowel
-console.log(checkCharacter('B'))  // Consonant
-console.log(checkCharacter('5'))  // Digit
-console.log(checkCharacter('@'))  // Special Character
-console.log(checkCharacter('ab')) // Please enter a single character
+console.log(calculateBill(400)) 
