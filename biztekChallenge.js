@@ -16,13 +16,35 @@
 
 // Question 2: write a program to find the largest of three numbers. using if..else statements.
 
-function findLargest(a,b,c){
-    if(a >= b && a>=c){
-        return a
-    } else if(b>=a && b>=c){
-        return b
+// function findLargest(a,b,c){
+//     if(a >= b && a>=c){
+//         return a
+//     } else if(b>=a && b>=c){
+//         return b
+//     }else{
+//         return c
+//     }
+// }
+// console.log(findLargest(1,2,3))
+
+// Question 3: Create a program that detemines the grade of a student based on marks:
+//  90 - 100: A+
+//  80 - 89: A
+//  70 - 79: B
+//  60 - 69: C
+//  Below 60: F
+
+function stMarks(marks){
+    if(marks >= 90 && marks <= 100){
+        return "A+"
+    }else if(marks >= 80 && marks <= 89){
+         return "A"
+    }else if(marks >= 70 && marks <= 79){
+         return "B"
+    }else if(marks >= 60 && marks <= 69){
+         return "C"
     }else{
-        return c
+        return "F"
     }
 }
-console.log(findLargest(1,2,3))
+console.log(stMarks(10))
