@@ -114,15 +114,35 @@
 
 // Question 7: Write a program that checks if a numbers is divisible by 3, 5 using nested if else.
 
-function checkDivisible(num){
-    if(num % 3 ===0 && num % 5 ===0){
-        return "Number is Divisible by 3 ,5"
-    }else if (num % 3 ===0){
-         return "Number is Divisible by 3"
-    }else if(num % 5 === 0){
-         return "Number is Divisible by 5"
+// function checkDivisible(num){
+//     if(num % 3 ===0 && num % 5 ===0){
+//         return "Number is Divisible by 3 ,5"
+//     }else if (num % 3 ===0){
+//          return "Number is Divisible by 3"
+//     }else if(num % 5 === 0){
+//          return "Number is Divisible by 5"
+//     }else{
+//         return "Number is not Divisible by 3,5"
+//     }
+// }
+// console.log(checkDivisible(12));
+
+// Question 8: Create a simple calculator that performs + -  * / operations Use if-Conditions & 
+// handle division by 0 using nested if else
+
+function calculator(num1,num2,op){
+    if(op === "+"){
+        return num1 + num2
+    }else if(op === "-"){
+        return num1 - num2
+    }else if(op ==="*"){
+        return num1 * num2
+    }else if(op === "/" && num1 !==0 && num2 !==0){
+        return num1 / num2
+    }else if(op === "/" && (num1 ===0 || num2 ===0)){
+        return "Division by zero is not allowed"
     }else{
-        return "Number is not Divisible by 3,5"
+        return "Invalid Operator"
     }
 }
-console.log(checkDivisible(12));
+console.log(calculator(0,3,"+"));
