@@ -1,3 +1,5 @@
+// === Conditional Statements Challenges ===
+
 // Question 1: write a program to check if number is positive, negative or zero. using if..else statements.
 
 // function checkNumber(num) {
@@ -150,23 +152,36 @@
 
 // Question 9: Write a program that takes day number (1-7) and prints the day name.
 
-function DayChecker(Daynum){
-    if(Daynum === 1){
-        return "Monday"
-    }else if(Daynum === 2){
-        return "Tuesday"
-    }else if(Daynum === 3){
-        return "Wendsday"
-    }else if(Daynum === 4){
-        return "Thursday"
-    }else if(Daynum === 5){
-        return "Friday"
-    }else if(Daynum === 6){
-        return "Saturday"
-    }else if(Daynum === 7){
-        return "Sunday"
-    }else{
-        return "Enter Number between 1-7 to check day"
+// function DayChecker(Daynum){
+//     if(Daynum === 1){
+//         return "Monday"
+//     }else if(Daynum === 2){
+//         return "Tuesday"
+//     }else if(Daynum === 3){
+//         return "Wendsday"
+//     }else if(Daynum === 4){
+//         return "Thursday"
+//     }else if(Daynum === 5){
+//         return "Friday"
+//     }else if(Daynum === 6){
+//         return "Saturday"
+//     }else if(Daynum === 7){
+//         return "Sunday"
+//     }else{
+//         return "Enter Number between 1-7 to check day"
+//     }
+// }
+// console.log(DayChecker(1));
+
+
+// === string Manipulation without built-in Functions Challenges ===
+
+// Question 10: Write a program to find the length of a string without using built-in function.
+function stringLength(str){
+    let count = 0
+    for(let char of str){
+        count++
     }
+    return count
 }
-console.log(DayChecker(1));
+console.log(stringLength("Hello World"));  // 11 
