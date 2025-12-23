@@ -126,5 +126,3 @@ function checkDivisible(num){
     }
 }
 console.log(checkDivisible(12));
-
-d
