@@ -177,11 +177,12 @@
 // === string Manipulation without built-in Functions Challenges ===
 
 // Question 10: Write a program to find the length of a string without using built-in function.
-function stringLength(str){
-    let count = 0
-    for(let char of str){
-        count++
-    }
-    return count
-}
-console.log(stringLength("Hello World"));  // 11 
+
+// function stringLength(str){
+//     let count = 0;
+//     for(char of str){
+//         count++;
+//     }
+//     return count;
+// }
+// console.log(stringLength("Hello World"));  // 11
