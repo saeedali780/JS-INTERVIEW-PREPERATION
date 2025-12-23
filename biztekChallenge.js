@@ -130,19 +130,43 @@
 // Question 8: Create a simple calculator that performs + -  * / operations Use if-Conditions & 
 // handle division by 0 using nested if else
 
-function calculator(num1,num2,op){
-    if(op === "+"){
-        return num1 + num2
-    }else if(op === "-"){
-        return num1 - num2
-    }else if(op ==="*"){
-        return num1 * num2
-    }else if(op === "/" && num1 !==0 && num2 !==0){
-        return num1 / num2
-    }else if(op === "/" && (num1 ===0 || num2 ===0)){
-        return "Division by zero is not allowed"
+// function calculator(num1,num2,op){
+//     if(op === "+"){
+//         return num1 + num2
+//     }else if(op === "-"){
+//         return num1 - num2
+//     }else if(op ==="*"){
+//         return num1 * num2
+//     }else if(op === "/" && num1 !==0 && num2 !==0){
+//         return num1 / num2
+//     }else if(op === "/" && (num1 ===0 || num2 ===0)){
+//         return "Division by zero is not allowed"
+//     }else{
+//         return "Invalid Operator"
+//     }
+// }
+// console.log(calculator(0,3,"+"));
+
+
+// Question 9: Write a program that takes day number (1-7) and prints the day name.
+
+function DayChecker(Daynum){
+    if(Daynum === 1){
+        return "Monday"
+    }else if(Daynum === 2){
+        return "Tuesday"
+    }else if(Daynum === 3){
+        return "Wendsday"
+    }else if(Daynum === 4){
+        return "Thursday"
+    }else if(Daynum === 5){
+        return "Friday"
+    }else if(Daynum === 6){
+        return "Saturday"
+    }else if(Daynum === 7){
+        return "Sunday"
     }else{
-        return "Invalid Operator"
+        return "Enter Number between 1-7 to check day"
     }
 }
-console.log(calculator(0,3,"+"));
+console.log(DayChecker(1));
