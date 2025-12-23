@@ -96,18 +96,33 @@
 // Next 200 : Rs 10 per unit
 // Above 300 : Rs 15 per unit
 
-function calculateBill(unit){
-    let bill = 0
+// function calculateBill(unit){
+//     let bill = 0
 
-    if(unit <=100){
-        bill = unit * 5
-    }else if(unit<=200){
-        bill = 100 * 5 + (unit - 100) * 7
-    }else if(unit<=300){
-        bill = (100 * 5)  + (100 * 7) + (unit -200) * 10
+//     if(unit <=100){
+//         bill = unit * 5
+//     }else if(unit<=200){
+//         bill = 100 * 5 + (unit - 100) * 7
+//     }else if(unit<=300){
+//         bill = (100 * 5)  + (100 * 7) + (unit -200) * 10
+//     }else{
+//         bill = (100 * 5)  + (100 * 7) + (100 * 10) +  (unit -300) * 15
+//     }
+//     return bill
+// }
+// console.log(calculateBill(400)) 
+
+// Question 7: Write a program that checks if a numbers is divisible by 3, 5 using nested if else.
+
+function checkDivisible(num){
+    if(num % 3 ===0 && num % 5 ===0){
+        return "Number is Divisible by 3 ,5"
+    }else if (num % 3 ===0){
+         return "Number is Divisible by 3"
+    }else if(num % 5 === 0){
+         return "Number is Divisible by 5"
     }else{
-        bill = (100 * 5)  + (100 * 7) + (100 * 10) +  (unit -300) * 15
+        return "Number is not Divisible by 3,5"
     }
-    return bill
 }
-console.log(calculateBill(400)) 
+console.log(checkDivisible(12));
