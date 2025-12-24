@@ -189,11 +189,27 @@ function stringLength(str){
 
 // Question 11: Write a program to reverse a string without using built-in function.
 
-function reverseString(str){
+// function reverseString(str){
+//     let reversed = "";
+//     for(let i  = stringLength(str)-1;i>=0;i--){
+//         reversed +=str[i];
+//     }
+//     return reversed   
+// }
+// console.log(reverseString("jerry"));
+
+// Question 12: Write a program to check if a string is palindrome without using built-in function.
+
+function isPalindrome(str){
     let reversed = "";
     for(let i  = stringLength(str)-1;i>=0;i--){
         reversed +=str[i];
     }
-    return reversed   
+    if(reversed === str){
+        return "Palindrome"
+    }else{
+        return "Not a Palindrome"
+    }
 }
-console.log(reverseString("jerry"));
+console.log(isPalindrome("madam"));  // Palindrome
+console.log(isPalindrome("hello"));  // Not a Palindrome
