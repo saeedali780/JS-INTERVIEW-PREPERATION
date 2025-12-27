@@ -213,3 +213,17 @@ function isPalindrome(str){
 }
 console.log(isPalindrome("madam"));  // Palindrome
 console.log(isPalindrome("hello"));  // Not a Palindrome
+
+// Question 13: Write a program to count the number of vowels in a string without using built-in function.
+
+function countVowels(str){
+    let count = 0;
+    for(let i =0;i<stringLength(str);i++){
+        let char = str[i].toLowerCase();
+        if(char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u'){
+            count++;
+        }
+    }
+    return count;
+}
+console.log(countVowels("Biztek IBA-MPK Speed Programming"));  // 9
