@@ -299,3 +299,18 @@ function charFrequency(str){
     return freq
 }
 console.log(charFrequency("hello world"));
+
+
+// Question 19: Create a program to remove all spaces from a string without using built-in function.
+
+function removeSpaces(str){
+    let result = ""
+    for(let i =0;i<stringLength(str);i++){
+        let char = str[i]
+        if(char !== " "){
+            result += char
+        }
+    }
+    return result;
+}
+console.log(removeSpaces("Hello World from Biztek"));  // HelloWorldfromBiztek
