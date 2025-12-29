@@ -227,3 +227,17 @@ function countVowels(str){
     return count;
 }
 console.log(countVowels("Biztek IBA-MPK Speed Programming"));  // 9
+
+
+// Question 14: Write a program to compare two strings without using built-in function.
+
+function compareStrings(str1,str2){
+    if(stringLength(str1) !== stringLength(str2)){
+        return "Strings are not equal"
+    }else{
+        return "Strings are equal"
+    }
+}
+
+console.log(compareStrings("Hello","Hell"))
+
