@@ -266,3 +266,19 @@ function concateString(str1,str2){
     return result
 }
 console.log(concateString("Hello ","Saeed"));
+
+// Question 17: Create a prrogram to convert lowercase to uppercase without using built-in function.
+
+function toUpperCase(str){
+    let upperStr = ""   
+    for(let i =0;i<stringLength(str);i++){
+        let charCode = str.charCodeAt(i)
+        if(charCode >= 97 && charCode <= 122){
+            upperStr += String.fromCharCode(charCode - 32)
+        }else{
+            upperStr += str[i]
+        }
+    }
+    return upperStr
+}
+console.log(toUpperCase("Hello world!"));  // HELLO WORLD!
