@@ -282,3 +282,20 @@ function toUpperCase(str){
     return upperStr
 }
 console.log(toUpperCase("Hello world!"));  // HELLO WORLD!
+
+
+// Question 18: Write a program to count the frequency of each character in a string without using built-in function.
+
+function charFrequency(str){
+    let freq = {}
+    for(let i =0;i<stringLength(str);i++){
+        let char = str[i]
+        if(freq[char]){
+            freq[char]++
+        }else{
+            freq[char] = 1
+        }
+    }
+    return freq
+}
+console.log(charFrequency("hello world"));
