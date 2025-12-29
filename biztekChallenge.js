@@ -241,3 +241,28 @@ function compareStrings(str1,str2){
 
 console.log(compareStrings("Hello","Hell"))
 
+
+// Question 15: Create a program to copy one string to another without using built-in function.
+
+function copyString(str){
+    let copied = ""
+    for(let i =0;i<stringLength(str);i++){
+        copied +=str[i]
+    }
+    return copied
+}
+
+console.log(copyString("Hello"));
+
+// Question 16: Write a program to concatenate two strings without using built-in function.
+function concateString(str1,str2){
+    let result = ""
+    for(let i = 0;i < stringLength(str1);i++){
+        result += str1[i]
+    }
+    for(let j = 0;j<stringLength(str2);j++){
+         result += str2[j]
+    }
+    return result
+}
+console.log(concateString("Hello ","Saeed"));
