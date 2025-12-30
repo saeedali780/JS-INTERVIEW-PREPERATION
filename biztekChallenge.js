@@ -314,3 +314,20 @@ function removeSpaces(str){
     return result;
 }
 console.log(removeSpaces("Hello World from Biztek"));  // HelloWorldfromBiztek
+
+// Array Problems (1D AND 2D) without using built-in functions Challenges ===
+// Question 20: Write a program to find sum and average of an array of numbers without using built-in functions.
+
+let numbers = [2,0,2,5,1,1];
+
+function sumAndAverage(arr){
+    let sum = 0;
+    let count = 0;
+    for(let i =0;i<arr.length;i++){
+        sum += arr[i];
+        count++;
+    }
+    let average = sum / count;
+    return {sum, average};
+}
+console.log(sumAndAverage(numbers));  // { sum: 11, average: 1.8333333333333333 }
