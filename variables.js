@@ -23,12 +23,27 @@
 
 
 // Variable Shadowing
-function test(){
-    let x = "Hello"
-    if(true){
-        let x = "hi"
-        console.log(x);
-    }
-console.log(x);  
-}
-test()
+// function shadowingExample() {
+//     let outerVar = "I am the outer variable";
+
+//     {
+//         let outerVar = "I am the inner variable"; // Shadows the outer variable
+//         console.log(outerVar); // Outputs: I am the inner variable
+//     }
+//     console.log(outerVar); // Outputs: I am the outer variable
+// }
+// shadowingExample();
+
+// function test(){
+//     let x = 10;
+//     var y = 20;
+//     if(true){
+//         let y = 30; // block scoped
+//         var x = 40; // function scoped
+//         console.log(x); // 40
+//         console.log(y); // 30
+//     }
+//     console.log(x); // 10
+//     console.log(y); // 40
+// }
+// test();
