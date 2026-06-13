@@ -22,6 +22,7 @@
 // var hoistedVar = "I am hoisted";
 
 
+
 // Variable Shadowing
 // function shadowingExample() {
 //     let outerVar = "I am the outer variable";
@@ -47,3 +48,7 @@
 //     console.log(y); // 40
 // }
 // test();
+
+console.log(myName);
+var myName = "Saeed"
+console.log(myName);
