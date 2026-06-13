@@ -5,13 +5,17 @@
 
 //Q1 how do you implement sum(1)(2)(3) ?
 
-function sum(a){
-  return function(b){
-    return function(c){
-      return a+b+c;
-    }
-  }
-}
+// function sum(a){
+//   return function(b){
+//     return function(c){
+//       return a+b+c;
+//     }
+//   }
+// }
 
-let logger = sum(1)(2)(3);
+// let logger = sum(1)(2)(3);
+// console.log(logger); // Output: 6
+
+const sum = a => b => c=> a+b+c;
+logger = sum(1)(2)(3);
 console.log(logger); // Output: 6
