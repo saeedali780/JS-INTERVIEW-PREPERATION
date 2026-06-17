@@ -12,13 +12,21 @@
 // })("Hello", "World");
 // console.log(func); // Output: Hello
 
-const user = {
-    name: 'Alice',
-    age: 25,
-    city: 'Los Angeles',
-    "Hello World": "This is a test",
-}
+// const user = {
+//     name: 'Alice',
+//     age: 25,
+//     city: 'Los Angeles',
+//     "Hello World": "This is a test",
+// }
 
-console.log(user.name); // Output: Alice
-console.log(user['age']); // Output
-console.log(user["Hello World"]); // Output: This is a test`
+// console.log(user.name); // Output: Alice
+// console.log(user['age']); // Output
+// console.log(user["Hello World"]); // Output: This is a test`
+
+// How we can add dynamic properties to an object How we can add dynamic properties to an object
+const propertyName = "fname";
+const value = "John";
+const user = {
+    [propertyName]: value
+}
+console.log(user.fname); // Output: John    
