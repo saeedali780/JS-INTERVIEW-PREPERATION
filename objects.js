@@ -61,3 +61,13 @@
 // };
 
 // console.log(multiplyByTwo(myObj)); // Output: { a: 2, b: 'hello', c: 6, d: true }
+
+// what is the output of the following code?
+
+const a = {};
+const b = {key: "b"};
+const c = {key: "c"};
+
+a[b] = 123;
+a[c] = 456;
+console.log(a[b]); // Output: 456
