@@ -64,10 +64,21 @@
 
 // what is the output of the following code?
 
-const a = {};
-const b = {key: "b"};
-const c = {key: "c"};
+// const a = {};
+// const b = {key: "b"};
+// const c = {key: "c"};
 
-a[b] = 123;
-a[c] = 456;
-console.log(a[b]); // Output: 456
+// a[b] = 123;
+// a[c] = 456;
+// console.log(a[b]); // Output: 456
+
+
+// what is the difference between JSON.stringify() and JSON.parse() methods in JavaScript?
+// JSON.stringify() converts a JavaScript object into a JSON string.
+
+const obj = { name: "John", age: 30 };
+const jsonString = JSON.stringify(obj);
+console.log(jsonString); // Output: '{"name":"John","age":30}'
+// JSON.parse() converts a JSON string back into a JavaScript object.
+const parsedObj = JSON.parse(jsonString);
+console.log(parsedObj); // Output: { name: 'John', age: 30 }
