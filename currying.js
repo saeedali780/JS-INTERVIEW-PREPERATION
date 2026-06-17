@@ -25,23 +25,49 @@
 //   Evaluate ("Divide")(4)(6) => 0.6666666666666666
 //   Evaluate ("Subtract")(4)(6) => -2
 
-function calculator(operation){
-  return function(a){
-    return function(b){
-      if(operation === "Sum"){
-        return a+b;
-      }else if(operation === "Multiply"){
-        return a*b;
-      }else if(operation === "Divide"){
-        return a/b;
-      }else if(operation === "Subtract"){
-        return a-b;
-    }else{
-      return "Invalid Operation"
-    }
-  }
+// function calculator(operation){
+//   return function(a){
+//     return function(b){
+//       if(operation === "Sum"){
+//         return a+b;
+//       }else if(operation === "Multiply"){
+//         return a*b;
+//       }else if(operation === "Divide"){
+//         return a/b;
+//       }else if(operation === "Subtract"){
+//         return a-b;
+//     }else{
+//       return "Invalid Operation"
+//     }
+//   }
+//   }
+// }
+
+// logger = calculator("Sum")(4)(6);
+// console.log(logger); // Output: 10
+
+// Q3 Infinite Currying
+
+function add(a){
+  return function(b){
+    if (b) return add(a+b); 
+    return a;
   }
 }
 
-logger = calculator("Sum")(4)(6);
-console.log(logger); // Output: 10
+
+console.log(add(5)(2)(3)(4)(5)()); // Output: 19
+
+//The solution: Promise Pool (Controlled Concurrency)
+//Instead of firing everything at once, I switched to batch-based processing:
+async function processUsers(users) {
+  const batchSize = 5;
+
+  for (let i = 0; i < users.length; i += batchSize) {
+    const batch = users.slice(i, i + batchSize);
+
+    await Promise.all(
+      batch.map(user => fetch(`/api/users/${user.id}`))
+    );
+  }
+}
