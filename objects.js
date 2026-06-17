@@ -32,12 +32,32 @@
 // console.log(user.fname); // Output: John    
 
 
-const user = {    name: 'Alice',
-    age: 25,
-    city: 'Los Angeles',
-    "Hello World": "This is a test",
-}
+// const user = {    name: 'Alice',
+//     age: 25,
+//     city: 'Los Angeles',
+//     "Hello World": "This is a test",
+// }
 
-for (let key in user) {
-    console.log(key + ": " + user[key]);
-}
+// for (let key in user) {
+//     console.log(key + ": " + user[key]);
+// }
+
+// create a function multiplyByTwo(obj) that takes an object as an argument and multiplies all its numeric properties by 2. The function should return the modified object.
+
+// function multiplyByTwo(obj) {
+//     for(let key in obj){
+//         if(typeof obj[key] === 'number'){
+//             obj[key] *= 2;
+//         }
+//     }
+//     return obj;
+// }
+
+// const myObj = {
+//     a: 1,
+//     b: 'hello',
+//     c: 3,
+//     d: true
+// };
+
+// console.log(multiplyByTwo(myObj)); // Output: { a: 2, b: 'hello', c: 6, d: true }
