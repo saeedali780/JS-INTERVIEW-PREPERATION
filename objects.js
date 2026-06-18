@@ -125,11 +125,17 @@
 const user = {
     name: 'Alice',
     age: 25,
-    city: 'Los Angeles'
+    city: 'Los Angeles',
+    fullName: {
+        firstName: "Saeed",
+        lastName: "Ali"
+    }
 };
 const name = "Saeed ali";
-const { name:myName, age, city } = user;
+const { name:myName, age, city, fullName:{ firstName, lastName } } = user;
 
 console.log(myName);
 console.log(age);
 console.log(city);
+console.log(firstName);
+console.log(lastName);
