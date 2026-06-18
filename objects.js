@@ -76,9 +76,20 @@
 // what is the difference between JSON.stringify() and JSON.parse() methods in JavaScript?
 // JSON.stringify() converts a JavaScript object into a JSON string.
 
-const obj = { name: "John", age: 30 };
-const jsonString = JSON.stringify(obj);
-console.log(jsonString); // Output: '{"name":"John","age":30}'
-// JSON.parse() converts a JSON string back into a JavaScript object.
-const parsedObj = JSON.parse(jsonString);
-console.log(parsedObj); // Output: { name: 'John', age: 30 }
+// const obj = { name: "John", age: 30 };
+// const jsonString = JSON.stringify(obj);
+// console.log(jsonString); // Output: '{"name":"John","age":30}'
+// // JSON.parse() converts a JSON string back into a JavaScript object.
+// const parsedObj = JSON.parse(jsonString);
+// console.log(parsedObj); // Output: { name: 'John', age: 30 }
+
+// what is the output of the following code?
+
+const obj = {
+    name: "John",
+    age: 30,
+    city: "New York"
+}
+
+const admin = {admin: true, ...obj};
+console.log(admin); // Output: { admin: true, name: 'John', age: 30, city: 'New York' }
