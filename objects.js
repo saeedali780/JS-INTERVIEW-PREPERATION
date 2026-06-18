@@ -127,9 +127,9 @@ const user = {
     age: 25,
     city: 'Los Angeles'
 };
+const name = "Saeed ali";
+const { name:myName, age, city } = user;
 
-const { name, age, city } = user;
-
-console.log(name);
+console.log(myName);
 console.log(age);
 console.log(city);
