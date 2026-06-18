@@ -96,11 +96,24 @@
 
 // what is the output of the following code?
 
-const settings = {
-    theme: "dark",
-    notifications: true,
-    autoSave: false
-}
+// const settings = {
+//     theme: "dark",
+//     notifications: true,
+//     autoSave: false
+// }
 
-const data = JSON.stringify(settings,["theme", "autoSave"]);
-console.log(data); // Output: '{"theme":"dark","autoSave":false}'
+// const data = JSON.stringify(settings,["theme", "autoSave"]);
+// console.log(data); // Output: '{"theme":"dark","autoSave":false}'
+
+// what is the output of the following code?
+
+const shape = {
+    radius: 5,
+    diameter() {
+        return 2 * this.radius;
+    },
+    perimeter: ()=> 2 * Math.PI * this.radius,
+};
+
+console.log(shape.diameter()); // Output: 10
+console.log(shape.perimeter()); // Output: Nan
