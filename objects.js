@@ -85,11 +85,22 @@
 
 // what is the output of the following code?
 
-const obj = {
-    name: "John",
-    age: 30,
-    city: "New York"
+// const obj = {
+//     name: "John",
+//     age: 30,
+//     city: "New York"
+// }
+
+// const admin = {admin: true, ...obj};
+// console.log(admin); // Output: { admin: true, name: 'John', age: 30, city: 'New York' }
+
+// what is the output of the following code?
+
+const settings = {
+    theme: "dark",
+    notifications: true,
+    autoSave: false
 }
 
-const admin = {admin: true, ...obj};
-console.log(admin); // Output: { admin: true, name: 'John', age: 30, city: 'New York' }
+const data = JSON.stringify(settings,["theme", "autoSave"]);
+console.log(data); // Output: '{"theme":"dark","autoSave":false}'
