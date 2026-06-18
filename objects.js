@@ -107,13 +107,29 @@
 
 // what is the output of the following code?
 
-const shape = {
-    radius: 5,
-    diameter() {
-        return 2 * this.radius;
-    },
-    perimeter: ()=> 2 * Math.PI * this.radius,
+// const shape = {
+//     radius: 5,
+//     diameter() {
+//         return 2 * this.radius;
+//     },
+//     perimeter: ()=> 2 * Math.PI * this.radius,
+// };
+
+// console.log(shape.diameter()); // Output: 10
+// console.log(shape.perimeter()); // Output: Nan
+
+
+// what is destructuring in objects?
+// Destructuring in objects is a convenient way to extract values from an object and assign them to variables. It allows you to unpack properties from an object into distinct variables in a single statement.
+
+const user = {
+    name: 'Alice',
+    age: 25,
+    city: 'Los Angeles'
 };
 
-console.log(shape.diameter()); // Output: 10
-console.log(shape.perimeter()); // Output: Nan
+const { name, age, city } = user;
+
+console.log(name);
+console.log(age);
+console.log(city);
