@@ -122,20 +122,33 @@
 // what is destructuring in objects?
 // Destructuring in objects is a convenient way to extract values from an object and assign them to variables. It allows you to unpack properties from an object into distinct variables in a single statement.
 
-const user = {
-    name: 'Alice',
-    age: 25,
-    city: 'Los Angeles',
-    fullName: {
-        firstName: "Saeed",
-        lastName: "Ali"
-    }
-};
-const name = "Saeed ali";
-const { name:myName, age, city, fullName:{ firstName, lastName } } = user;
+// const user = {
+//     name: 'Alice',
+//     age: 25,
+//     city: 'Los Angeles',
+//     fullName: {
+//         firstName: "Saeed",
+//         lastName: "Ali"
+//     }
+// };
+// const name = "Saeed ali";
+// const { name:myName, age, city, fullName:{ firstName, lastName } } = user;
 
-console.log(myName);
-console.log(age);
-console.log(city);
-console.log(firstName);
-console.log(lastName);
+// console.log(myName);
+// console.log(age);
+// console.log(city);
+// console.log(firstName);
+// console.log(lastName);
+
+// what is the output of the following code?
+
+let person = {
+    name: "John",
+    age: 30,
+    city: "New York"
+};
+
+const memeber = [person];
+person = null;
+
+console.log(memeber); // Output: { name: 'John', age: 30, city: 'New York' }
