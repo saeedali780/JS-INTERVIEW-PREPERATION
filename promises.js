@@ -7,9 +7,15 @@
 
 console.log("Start of the program");
 
-setTimeout(() => {
-    console.log("This is a message from setTimeout");
-}, 2000);
+function importAction(message, callback) {
+    setTimeout(() => {
+        callback(message);
+    }, 2000);
+}
+
+const message = importAction("Hello, World!", function(message){
+console.log(message);
+})
 
 console.log("This is end of the program");
 
