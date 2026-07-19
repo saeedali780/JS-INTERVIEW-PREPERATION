@@ -13,15 +13,26 @@ function importAction(message, callback) {
     }, 2000);
 }
 
-function likeTheVideo(video){
+function likeTheVideo(video,cb){
     setTimeout(() => {
-        console.log(`You liked the video: ${video}`);
+      cb(`You liked the video: ${video}`);
     }, 1000);
 }
-
+function shareTheVideo(video,cb){
+    setTimeout(() => {
+      cb(`You shared the video: ${video}`);
+    }, 1000);
+}
 const message = importAction("Hello, World!", function(message){
 console.log(message);
-likeTheVideo("JavaScript Promises Tutorial");
+likeTheVideo("JavaScript Promises Tutorial", function(action){
+    console.log(action);
+    shareTheVideo("JavaScript Promises Tutorial", function(action){
+    console.log(action);
+});
+});
+
+
 })
 
 console.log("This is end of the program");
