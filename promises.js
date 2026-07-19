@@ -7,21 +7,39 @@
 
 console.log("Start of the program");
 
-const sub = new Promise((resolve, reject) => {
-    let a = 1 + 1;
-    if (a == 2) {
-        resolve("Success");
-    }
-    else {
-        reject("Failed");
-    }
-});
+function importAction(username, callback) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(`Hello, ${username} you subscribed to the channel!`);
+        }, 1000);
+    });
+}
 
-sub.then((message) => {
-    console.log("This is in then: " + message);
-}).catch((message) => {
-    console.log("This is in catch: " + message);
-});
+function likeTheVideo(video,cb){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(`You liked the video: ${video}`);
+        }, 1000);
+    });
+}
+function shareTheVideo(video,cb){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(`You shared the video: ${video}`);
+        }, 1000);
+    });
+}
 
+importAction("Saeed Ali").then((message)=>{
+    console.log(message);
+    likeTheVideo("JavaScript Promises").then((message)=>{
+        console.log(message);
+        shareTheVideo("JavaScript Promises").then((message)=>{
+            console.log(message);
+        });
+    });
+}).catch((error)=>{
+    console.log(error);
+});
 console.log("This is end of the program");
 
