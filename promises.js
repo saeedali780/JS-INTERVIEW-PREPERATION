@@ -7,33 +7,21 @@
 
 console.log("Start of the program");
 
-function importAction(message, callback) {
-    setTimeout(() => {
-        callback(message);
-    }, 2000);
-}
-
-function likeTheVideo(video,cb){
-    setTimeout(() => {
-      cb(`You liked the video: ${video}`);
-    }, 1000);
-}
-function shareTheVideo(video,cb){
-    setTimeout(() => {
-      cb(`You shared the video: ${video}`);
-    }, 1000);
-}
-const message = importAction("Hello, World!", function(message){
-console.log(message);
-likeTheVideo("JavaScript Promises Tutorial", function(action){
-    console.log(action);
-    shareTheVideo("JavaScript Promises Tutorial", function(action){
-    console.log(action);
-});
+const sub = new Promise((resolve, reject) => {
+    let a = 1 + 1;
+    if (a == 2) {
+        resolve("Success");
+    }
+    else {
+        reject("Failed");
+    }
 });
 
-
-})
+sub.then((message) => {
+    console.log("This is in then: " + message);
+}).catch((message) => {
+    console.log("This is in catch: " + message);
+});
 
 console.log("This is end of the program");
 
