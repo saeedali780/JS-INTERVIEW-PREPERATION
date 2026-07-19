@@ -13,8 +13,15 @@ function importAction(message, callback) {
     }, 2000);
 }
 
+function likeTheVideo(video){
+    setTimeout(() => {
+        console.log(`You liked the video: ${video}`);
+    }, 1000);
+}
+
 const message = importAction("Hello, World!", function(message){
 console.log(message);
+likeTheVideo("JavaScript Promises Tutorial");
 })
 
 console.log("This is end of the program");
