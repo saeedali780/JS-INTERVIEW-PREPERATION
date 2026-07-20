@@ -30,14 +30,15 @@ function shareTheVideo(video,cb){
     });
 }
 
-importAction("Saeed Ali").then((message)=>{
-    console.log(message);
-    likeTheVideo("JavaScript Promises").then((message)=>{
-        console.log(message);
-        shareTheVideo("JavaScript Promises").then((message)=>{
-            console.log(message);
-        });
-    });
+importAction("Saeed Ali").then((res)=>{
+    console.log(res);
+
+    return likeTheVideo("JavaScript Promises");
+}).then((res)=>{
+    console.log(res);
+    return shareTheVideo("JavaScript Promises");
+}).then((res)=>{
+    console.log(res);
 }).catch((error)=>{
     console.log(error);
 });
