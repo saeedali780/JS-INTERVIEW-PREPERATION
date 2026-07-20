@@ -10,6 +10,7 @@ console.log("Start of the program");
 const promise1 = new Promise((res,rej)=>{
     console.log(1);
     res(2);
+    console.log(3);
 });
 
 promise1.then((value)=>{
