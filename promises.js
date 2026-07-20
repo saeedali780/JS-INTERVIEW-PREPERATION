@@ -3,23 +3,40 @@
 // or in the future, or never. Promises can be in one of three states: 
 // pending, fulfilled, or rejected.
 
-// Synchrounous code vs Asynchronous code
+// promises in js Output based Questions
 
-console.log("Start of the program");
+function job(state){
+    return new Promise(function(resolve, reject){
+        if(state){
+            resolve('success');
+        }
+        else{
+            reject('error');
+        }
+    });
+};
 
-function fn(){
-   return new Promise((res,rej)=>{
-    console.log(1);
-    res("success");
+let promise = job(true);
+
+promise
+.then(function(data){
+    console.log(data);
+
+    return job(false);
+})
+.catch(function(error){
+    console.log(error);
+
+    return "error caught";
+})
+.then(function(data){
+    console.log(data);
+
+    return job(true);
+}).catch(function(error){
+    console.log(error);
 });
-}
-
-console.log("Middle of the program");
-
-fn().then((val)=>{
-    console.log(val);
-}).catch((err)=>{
-    console.log(err);
-});
-
-console.log("End of the program");
+// output:
+// success
+// error
+// error caught
