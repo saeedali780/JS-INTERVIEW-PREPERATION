@@ -7,12 +7,19 @@
 
 console.log("Start of the program");
 
-const promise1 = new Promise((res,rej)=>{
+function fn(){
+   return new Promise((res,rej)=>{
     console.log(1);
-    console.log(3);
+    res("success");
+});
+}
+
+console.log("Middle of the program");
+
+fn().then((val)=>{
+    console.log(val);
+}).catch((err)=>{
+    console.log(err);
 });
 
-promise1.then((value)=>{
-    console.log(value);
-});
 console.log("End of the program");
