@@ -5,46 +5,14 @@
 
 // promises in js Output based Questions
 
-function job(state){
-    return new Promise(function(resolve, reject){
-        if(state){
-            resolve('success');
-        }
-        else{
-            reject(' rejected error');
-        }
-    });
-};
-
-let promise = job(true); // success
-
-promise
-.then(function(data){
-    console.log(data);
-    return job(true);
+const firstPromise = new Promise((resolve, reject) => {
+    resolve("First promise resolved");
 })
-.then(function(data){
-    if(data !== 'victory'){
-        throw 'Defeat'; 
-    }
-    return job(true);
-}).then(function(data){
-    console.log(data);
-}).catch(function(error){
-    console.log(error); // defeat
-    return job(false);
-}).then(function(data){
-    console.log(data);
 
-    return job(false);
-}).catch(function(error){
-    console.log(error); // rejected error
-    return 'Error caught';
-}).then(function(data){
-    console.log(data); // Error caught
-    return new Error('test');
-}).then(function(data){
-    console.log('Success:', data.message); // Success: test
-}).catch(function(data){
-    console.log('Error:', data.message);
-});
+const secondPromise = new Promise((resolve, reject) => {
+    resolve(firstPromise)
+})
+
+secondPromise.then((result) => {
+    console.log(result); // Output: First promise resolved
+})
