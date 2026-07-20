@@ -18,7 +18,7 @@ function importAction(username, callback) {
 function likeTheVideo(video,cb){
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve(`You liked the video: ${video}`);
+            reject(`You liked the video: ${video}`);
         }, 1000);
     });
 }
@@ -30,17 +30,14 @@ function shareTheVideo(video,cb){
     });
 }
 
-importAction("Saeed Ali").then((res)=>{
-    console.log(res);
-
-    return likeTheVideo("JavaScript Promises");
-}).then((res)=>{
-    console.log(res);
-    return shareTheVideo("JavaScript Promises");
-}).then((res)=>{
+Promise.all([
+    importAction("John"),
+    likeTheVideo("JavaScript Promises"),
+    shareTheVideo("JavaScript Promises")
+]).then((res)=>{
     console.log(res);
 }).catch((error)=>{
-    console.log(error);
+    console.error("An error occurred:", error);
 });
 console.log("This is end of the program");
 
