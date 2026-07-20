@@ -30,7 +30,7 @@ function shareTheVideo(video,cb){
     });
 }
 
-Promise.allSettled([
+Promise.any([
     importAction("John"),
     likeTheVideo("JavaScript Promises"),
     shareTheVideo("JavaScript Promises")
