@@ -5,14 +5,16 @@
 
 // promises in js Output based Questions
 
-const firstPromise = new Promise((resolve, reject) => {
-    resolve("First promise resolved");
-})
 
-const secondPromise = new Promise((resolve, reject) => {
-    resolve(firstPromise)
-})
+async function loadJson(url){
+    let response = await fetch(url);
+   if (response.status == 200) {
+    let json = await response.json();
+    return json;
+  }
+  throw new Error(response.status);
+}
 
-secondPromise.then((result) => {
-    console.log(result); // Output: First promise resolved
-})
+loadJson('https://jsonplaceholder.typicode.com/todos/1')
+  .then(json => console.log(json))
+  .catch(err => console.log(err));
