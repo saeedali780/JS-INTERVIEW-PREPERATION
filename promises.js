@@ -11,32 +11,40 @@ function job(state){
             resolve('success');
         }
         else{
-            reject('error');
+            reject(' rejected error');
         }
     });
 };
 
-let promise = job(true);
+let promise = job(true); // success
 
 promise
 .then(function(data){
     console.log(data);
-
-    return job(false);
-})
-.catch(function(error){
-    console.log(error);
-
-    return "error caught";
+    return job(true);
 })
 .then(function(data){
+    if(data !== 'victory'){
+        throw 'Defeat'; 
+    }
+    return job(true);
+}).then(function(data){
+    console.log(data);
+}).catch(function(error){
+    console.log(error); // defeat
+    return job(false);
+}).then(function(data){
     console.log(data);
 
-    return job(true);
+    return job(false);
 }).catch(function(error){
-    console.log(error);
+    console.log(error); // rejected error
+    return 'Error caught';
+}).then(function(data){
+    console.log(data); // Error caught
+    return new Error('test');
+}).then(function(data){
+    console.log('Success:', data.message); // Success: test
+}).catch(function(data){
+    console.log('Error:', data.message);
 });
-// output:
-// success
-// error
-// error caught
