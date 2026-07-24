@@ -21,36 +21,85 @@
 
 // Promise Pollyfills implementation
 
-function PromisePollyfill(executor){
-  let onResolve,onReject;
-  function resolve(value){
-    onResolve(value)
-  };
-  function reject(value){
-    onReject(value)
-  }
+function PromisePollyfill(executor) {
+    let onResolve,
+        onReject,
+        isFullfiled = false,
+        isRejected = false,
+        isCalled = false,
+        value;
 
-  this.then = function(callback){
-   onResolve = callback
-   return this;
+    function resolve(val) {
+        isFullfiled = true;
+        value = val;
 
-  };
-  this.catch = function(callback){
-    onReject = callback
-    return this
-  };
+        if (typeof onResolve === "function") {
+            isCalled = true;
+            onResolve(val);
+        }
+    }
 
-  executor(resolve, reject)
+    function reject(val) {
+        isRejected = true;
+        value = val;
+
+        if (typeof onReject === "function") {
+            isCalled = true;
+            onReject(val);
+        }
+    }
+
+    this.then = function (callback) {
+        onResolve = callback;
+
+        if (isFullfiled && !isCalled) {
+            isCalled = true;
+            onResolve(value);
+        }
+
+        return this;
+    };
+
+    this.catch = function (callback) {
+        onReject = callback;
+
+        if (isRejected && !isCalled) {
+            isCalled = true;
+            onReject(value);
+        }
+
+        return this;
+    };
+
+   try{
+     executor(resolve, reject);
+   }catch(error){
+    console.log(error);
+    reject(error)
+   }
 }
 
-const exapmePromise = new PromisePollyfill((resolve,reject)=>{
-  setTimeout(()=>{
-    resolve(2);
-  },1000);
+const examplePromise = new PromisePollyfill((resolve, reject) => {
+    setTimeout(() => {
+        resolve(2);
+    }, 1000);
 });
 
-exapmePromise.then((res)=>{
-  console.log(res);
-}).catch((error)=>{
-  console.log(error);
-})
+examplePromise
+    .then((res) => {
+        console.log(res);
+    })
+    .catch((err) => {
+        console.log(err);
+    });
+
+    PromisePollyfill.resolve = (val)=>{
+      return new PromisePollyfill(function executor(resolve, _reject){
+        resolve(val)
+      })
+    }
+     PromisePollyfill.reject = (val)=>{
+      return new PromisePollyfill(function executor(resolve, _reject){
+        _reject(val)
+      })
+    }
