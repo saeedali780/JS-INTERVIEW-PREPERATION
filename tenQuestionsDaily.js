@@ -85,18 +85,28 @@
 
 // Q 7: FizzBuzz
 
-function fizzBuzz(){
-    for(let i = 1; i<=50;i++){
-        if(i % 3 === 0 && i % 5 === 0){
-            console.log("FizzBuzz : ", i);    
-        }else if(i % 5 ===0){
-            console.log("Buzz: ", i);
-        }else if(i % 3 === 0 ){
-        console.log("Fizz: ", i);
-    }else{
-        console.log("Something else: " , i);
+// function fizzBuzz(){
+//     for(let i = 1; i<=50;i++){
+//         if(i % 3 === 0 && i % 5 === 0){
+//             console.log("FizzBuzz : ", i);    
+//         }else if(i % 5 ===0){
+//             console.log("Buzz: ", i);
+//         }else if(i % 3 === 0 ){
+//         console.log("Fizz: ", i);
+//     }else{
+//         console.log("Something else: " , i);
         
-    }
+//     }
+//     }
+// }
+// fizzBuzz()
+
+
+// Q 8. Multiplication Table
+
+function table(num){
+    for(let i = 1; i<=10;i++){
+        console.log(`${num} x ${i} = ${num*i}`);
     }
 }
-fizzBuzz()
+table(2)
