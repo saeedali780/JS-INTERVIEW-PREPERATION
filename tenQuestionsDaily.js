@@ -16,16 +16,27 @@
 // Q 2. Even or Odd
 
 // Write a function:
-
 // isEven(num)
-
 // Return true if the number is even, otherwise false.
 
-function isEven(num){
-    if(num % 2 ===0){
-        return "Even: " +  num;
-    }else{
-        return "Odd: " + num;
+// function isEven(num){
+//     if(num % 2 ===0){
+//         return "Even: " +  num;
+//     }else{
+//         return "Odd: " + num;
+//     }
+// }
+// console.log(isEven(4)); // Output: Even: 4
+
+// Q 3. Largest Number
+// Write a function:
+// findLargest(a, b)
+// Return the larger number.
+
+function findLargest(a, b){
+    if(a > b){
+        return "Largest Number is: " + a;
     }
+    return "Largest Number is: " + b;
 }
-console.log(isEven(4)); // Output: Even: 4
+console.log(findLargest(10, 20)); // Output: Largest Number is: 20
