@@ -33,10 +33,22 @@
 // findLargest(a, b)
 // Return the larger number.
 
-function findLargest(a, b){
-    if(a > b){
-        return "Largest Number is: " + a;
-    }
-    return "Largest Number is: " + b;
+// function findLargest(a, b){
+//     if(a > b){
+//         return "Largest Number is: " + a;
+//     }
+//     return "Largest Number is: " + b;
+// }
+// console.log(findLargest(10, 20)); // Output: Largest Number is: 20
+
+// 4. Sum from 1 to N
+
+function sumToN(n){
+    let sum = 0;
+
+    for(let i = 1; i<= n;i++){
+        sum += i;
+    };
+    return sum;
 }
-console.log(findLargest(10, 20)); // Output: Largest Number is: 20
+console.log(sumToN(29));
