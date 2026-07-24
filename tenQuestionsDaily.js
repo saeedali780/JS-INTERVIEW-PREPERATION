@@ -43,12 +43,24 @@
 
 // Q 4. Sum from 1 to N
 
-function sumToN(n){
-    let sum = 0;
+// function sumToN(n){
+//     let sum = 0;
 
-    for(let i = 1; i<= n;i++){
-        sum += i;
-    };
-    return sum;
+//     for(let i = 1; i<= n;i++){
+//         sum += i;
+//     };
+//     return sum;
+// }
+// console.log(sumToN(29));
+
+// Q 5. Reverse a String
+
+function reversedStr(string){
+    let result = "";
+
+    for(let i = string.length - 1; i>=0;i--){
+        result += string[i]
+    }
+    return result
 }
-console.log(sumToN(29));
+console.log(reversedStr("Hello"));
