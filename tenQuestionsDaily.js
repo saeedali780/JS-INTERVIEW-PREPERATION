@@ -68,16 +68,35 @@
 
 // Q 6. Count Vowels
 
-function countVowels(str){
-    let count = 0;
-    let vowels = 'aieou';
+// function countVowels(str){
+//     let count = 0;
+//     let vowels = 'aieou';
 
-    for(let i = 0; i< str.length;i++){
-        if(vowels.includes(str[i])){
-            count++
-        }
+//     for(let i = 0; i< str.length;i++){
+//         if(vowels.includes(str[i])){
+//             count++
+//         }
+//     }
+//     return count
+// }
+
+// console.log(countVowels("helllo"));
+
+
+// Q 7: FizzBuzz
+
+function fizzBuzz(){
+    for(let i = 1; i<=50;i++){
+        if(i % 3 === 0 && i % 5 === 0){
+            console.log("FizzBuzz : ", i);    
+        }else if(i % 5 ===0){
+            console.log("Buzz: ", i);
+        }else if(i % 3 === 0 ){
+        console.log("Fizz: ", i);
+    }else{
+        console.log("Something else: " , i);
+        
     }
-    return count
+    }
 }
-
-console.log(countVowels("helllo"));
+fizzBuzz()
