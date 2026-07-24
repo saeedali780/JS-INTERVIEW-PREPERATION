@@ -41,7 +41,7 @@
 // }
 // console.log(findLargest(10, 20)); // Output: Largest Number is: 20
 
-// 4. Sum from 1 to N
+// Q 4. Sum from 1 to N
 
 function sumToN(n){
     let sum = 0;
