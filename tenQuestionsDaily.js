@@ -55,12 +55,29 @@
 
 // Q 5. Reverse a String
 
-function reversedStr(string){
-    let result = "";
+// function reversedStr(string){
+//     let result = "";
 
-    for(let i = string.length - 1; i>=0;i--){
-        result += string[i]
+//     for(let i = string.length - 1; i>=0;i--){
+//         result += string[i]
+//     }
+//     return result
+// }
+// console.log(reversedStr("Hello"));
+
+
+// Q 6. Count Vowels
+
+function countVowels(str){
+    let count = 0;
+    let vowels = 'aieou';
+
+    for(let i = 0; i< str.length;i++){
+        if(vowels.includes(str[i])){
+            count++
+        }
     }
-    return result
+    return count
 }
-console.log(reversedStr("Hello"));
+
+console.log(countVowels("helllo"));
