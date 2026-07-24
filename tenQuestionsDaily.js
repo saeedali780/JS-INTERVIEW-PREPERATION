@@ -104,9 +104,32 @@
 
 // Q 8. Multiplication Table
 
-function table(num){
-    for(let i = 1; i<=10;i++){
-        console.log(`${num} x ${i} = ${num*i}`);
+// function table(num){
+//     for(let i = 1; i<=10;i++){
+//         console.log(`${num} x ${i} = ${num*i}`);
+//     }
+// }
+// table(2)
+
+
+// Q 9. Palindrome
+
+// Write a function:
+// isPalindrome(str)
+// Return true if the string is a palindrome, otherwise false.
+// Do not use reverse().
+
+function isPalindrome(str){
+    let reversedStr = "";
+
+    for(let i = str.length - 1; i>=0;i--){
+        reversedStr += str[i]
     }
+    if(reversedStr === str){
+        return true;
+    }else{
+        return false
+    }
+    
 }
-table(2)
+console.log(isPalindrome("madam"));
