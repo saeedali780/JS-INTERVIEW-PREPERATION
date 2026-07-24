@@ -119,17 +119,50 @@
 // Return true if the string is a palindrome, otherwise false.
 // Do not use reverse().
 
-function isPalindrome(str){
-    let reversedStr = "";
+// function isPalindrome(str){
+//     let reversedStr = "";
 
-    for(let i = str.length - 1; i>=0;i--){
-        reversedStr += str[i]
-    }
-    if(reversedStr === str){
-        return true;
-    }else{
-        return false
-    }
+//     for(let i = str.length - 1; i>=0;i--){
+//         reversedStr += str[i]
+//     }
+//     if(reversedStr === str){
+//         return true;
+//     }else{
+//         return false
+//     }
     
+// }
+// console.log(isPalindrome("madam"));
+
+
+// Q 10. Grade Calculator
+
+// Write a function:
+// guessGrade(marks)
+// Return:
+// A+ → 90–100
+// A → 80–89
+// B → 70–79
+// C → 60–69
+// D → 50–59
+// Fail → Below 50
+
+function guessGrade(marks){
+    if(marks < 0 || marks > 100){
+        console.log("please enter between 0 to 100", marks);
+    }else if(marks >= 90){
+          console.log("You Secured A+ & your marks are :", marks);
+    }
+    else if(marks >= 80){
+        console.log("You Secured A & your marks are :", marks);
+    }else if(marks >= 70){
+        console.log("You Secured B & your marks are :", marks);
+    }else if(marks >= 60){
+         console.log("You Secured C & your marks are :", marks);
+    }else if(marks >= 50 ){
+         console.log("You Secured D & your marks are :", marks);
+    }else if(marks <50){
+        console.log("Ops your failed & your marks are :", marks);
+    }
 }
-console.log(isPalindrome("madam"));
+guessGrade(-65)
