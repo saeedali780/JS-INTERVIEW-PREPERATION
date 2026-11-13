@@ -171,29 +171,43 @@
 
 // Q1. Reverse a String
 
-function reverseString(str){
-    let result = "";
+// function reverseString(str){
+//     let result = "";
 
-    for(let i  =  str.length - 1 ; i>=0; i--){
-        result += str[i];
-    }
-    return result;
-}
+//     for(let i  =  str.length - 1 ; i>=0; i--){
+//         result += str[i];
+//     }
+//     return result;
+// }
 // console.log(reverseString("Hey Saeed"))
 
 // Q2. Palindrome Checker
 
-function isPalindrome(str) {
-    let lowerStr = str.toLowerCase();
-    let result = reverseString(lowerStr);
+// function isPalindrome(str) {
+//     let lowerStr = str.toLowerCase();
+//     let result = reverseString(lowerStr);
 
-    if (result === lowerStr) {
-        return true;
-    } else {
-        return false;
+//     if (result === lowerStr) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+// console.log(isPalindrome("Madam"));   // true
+// console.log(isPalindrome("Hello"));   // false
+// console.log(isPalindrome("RaceCar")); // true
+
+// Q3: Find the Largest Number
+
+function findLargest(numbers) {
+    let largest = numbers[0];
+    for (let i = 1; i< numbers.length; i++) {
+        if(numbers[i] > largest) {
+            largest = numbers[i];
+        }
     }
-}
+    return largest;
 
-console.log(isPalindrome("Madam"));   // true
-console.log(isPalindrome("Hello"));   // false
-console.log(isPalindrome("RaceCar")); // true
+}
+console.log(findLargest([10, 20, 5, 30, 15])); // Output: 30
