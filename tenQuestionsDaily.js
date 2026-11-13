@@ -214,14 +214,29 @@
 
 // Q4: Remove Duplicates from an Array
 
-function removeDuplicates(arr) {
-    let uniqueArr = [];
-    for(let i = 0; i < arr.length; i++) {
-        if(!uniqueArr.includes(arr[i])) {
-            uniqueArr.push(arr[i]);
+// function removeDuplicates(arr) {
+//     let uniqueArr = [];
+//     for(let i = 0; i < arr.length; i++) {
+//         if(!uniqueArr.includes(arr[i])) {
+//             uniqueArr.push(arr[i]);
+//         }
+//     }
+//     return uniqueArr;
+// }
+
+// console.log(removeDuplicates([1, 2, 3, 2, 4, 1, 5])); // Output: [1, 2, 3, 4, 5]
+
+// Q5: Count Vowels in a String
+
+function countVowels(str) {
+    let count = 0;
+    let vowels = 'aeiouAEIOU';
+
+    for (let i = 0; i < str.length; i++) {
+        if (vowels.includes(str[i])) {
+            count++;
         }
     }
-    return uniqueArr;
+    return count;
 }
-
-console.log(removeDuplicates([1, 2, 3, 2, 4, 1, 5])); // Output: [1, 2, 3, 4, 5]
+console.log(countVowels("Hello World")); // Output: 3
