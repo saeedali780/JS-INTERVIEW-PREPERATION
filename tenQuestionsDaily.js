@@ -200,14 +200,28 @@
 
 // Q3: Find the Largest Number
 
-function findLargest(numbers) {
-    let largest = numbers[0];
-    for (let i = 1; i< numbers.length; i++) {
-        if(numbers[i] > largest) {
-            largest = numbers[i];
+// function findLargest(numbers) {
+//     let largest = numbers[0];
+//     for (let i = 1; i< numbers.length; i++) {
+//         if(numbers[i] > largest) {
+//             largest = numbers[i];
+//         }
+//     }
+//     return largest;
+
+// }
+// console.log(findLargest([10, 20, 5, 30, 15])); // Output: 30
+
+// Q4: Remove Duplicates from an Array
+
+function removeDuplicates(arr) {
+    let uniqueArr = [];
+    for(let i = 0; i < arr.length; i++) {
+        if(!uniqueArr.includes(arr[i])) {
+            uniqueArr.push(arr[i]);
         }
     }
-    return largest;
-
+    return uniqueArr;
 }
-console.log(findLargest([10, 20, 5, 30, 15])); // Output: 30
+
+console.log(removeDuplicates([1, 2, 3, 2, 4, 1, 5])); // Output: [1, 2, 3, 4, 5]
