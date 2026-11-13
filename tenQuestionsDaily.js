@@ -179,4 +179,21 @@ function reverseString(str){
     }
     return result;
 }
-console.log(reverseString("Hey Saeed"))
+// console.log(reverseString("Hey Saeed"))
+
+// Q2. Palindrome Checker
+
+function isPalindrome(str) {
+    let lowerStr = str.toLowerCase();
+    let result = reverseString(lowerStr);
+
+    if (result === lowerStr) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(isPalindrome("Madam"));   // true
+console.log(isPalindrome("Hello"));   // false
+console.log(isPalindrome("RaceCar")); // true
