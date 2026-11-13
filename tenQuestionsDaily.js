@@ -147,22 +147,36 @@
 // D → 50–59
 // Fail → Below 50
 
-function guessGrade(marks){
-    if(marks < 0 || marks > 100){
-        console.log("please enter between 0 to 100", marks);
-    }else if(marks >= 90){
-          console.log("You Secured A+ & your marks are :", marks);
+// function guessGrade(marks){
+//     if(marks < 0 || marks > 100){
+//         console.log("please enter between 0 to 100", marks);
+//     }else if(marks >= 90){
+//           console.log("You Secured A+ & your marks are :", marks);
+//     }
+//     else if(marks >= 80){
+//         console.log("You Secured A & your marks are :", marks);
+//     }else if(marks >= 70){
+//         console.log("You Secured B & your marks are :", marks);
+//     }else if(marks >= 60){
+//          console.log("You Secured C & your marks are :", marks);
+//     }else if(marks >= 50 ){
+//          console.log("You Secured D & your marks are :", marks);
+//     }else if(marks <50){
+//         console.log("Ops your failed & your marks are :", marks);
+//     }
+// }   
+// guessGrade(-65)
+
+// 13-11-2026 Ten Questions Daily
+
+// Q1. Reverse a String
+
+function reverseString(str){
+    let result = "";
+
+    for(let i  =  str.length - 1 ; i>=0; i--){
+        result += str[i];
     }
-    else if(marks >= 80){
-        console.log("You Secured A & your marks are :", marks);
-    }else if(marks >= 70){
-        console.log("You Secured B & your marks are :", marks);
-    }else if(marks >= 60){
-         console.log("You Secured C & your marks are :", marks);
-    }else if(marks >= 50 ){
-         console.log("You Secured D & your marks are :", marks);
-    }else if(marks <50){
-        console.log("Ops your failed & your marks are :", marks);
-    }
+    return result;
 }
-guessGrade(-65)
+console.log(reverseString("Hey Saeed"))
