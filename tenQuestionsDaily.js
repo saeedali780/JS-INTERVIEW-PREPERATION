@@ -243,27 +243,48 @@
 
 // Q6: FizzBuzz
 
-function fizzBuzz() {
-    let numbers = [];
-    for(let i = 1; i<=100; i++){
-        numbers.push(i);
-    }
-    if(numbers.length === 0){
-        return "Array is empty";
-    }else if(numbers.length > 0){
-        for(let i = 0; i < numbers.length; i++){
-            if(numbers[i] % 3 === 0 && numbers[i] % 5 ===0){
-                console.log("FizzBuzz: ", numbers[i]);
-            }else if(numbers[i] % 3 === 0){
-                console.log("Fizz: ", numbers[i]);
-            }
-            else if(numbers[i] % 5 === 0){
-                console.log("Buzz: ", numbers[i]);
-            }else {
-                console.log(numbers[i]);
-            }
+// function fizzBuzz() {
+//     let numbers = [];
+//     for(let i = 1; i<=100; i++){
+//         numbers.push(i);
+//     }
+//     if(numbers.length === 0){
+//         return "Array is empty";
+//     }else if(numbers.length > 0){
+//         for(let i = 0; i < numbers.length; i++){
+//             if(numbers[i] % 3 === 0 && numbers[i] % 5 ===0){
+//                 console.log("FizzBuzz: ", numbers[i]);
+//             }else if(numbers[i] % 3 === 0){
+//                 console.log("Fizz: ", numbers[i]);
+//             }
+//             else if(numbers[i] % 5 === 0){
+//                 console.log("Buzz: ", numbers[i]);
+//             }else {
+//                 console.log(numbers[i]);
+//             }
+//         }
+//     }
+// }
+
+// fizzBuzz();
+
+
+
+// Q7. Find the Second Largest Number
+
+function findSecondLargest(numbers) {
+    let largest = -Infinity;
+    let secondLargest = -Infinity;
+
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] > largest) {
+            secondLargest = largest;
+            largest = numbers[i];
+        } else if (numbers[i] > secondLargest && numbers[i] !== largest) {
+            secondLargest = numbers[i];
         }
     }
+    return secondLargest;
 }
 
-fizzBuzz();
+console.log(findSecondLargest([10, 20, 5, 30, 15])); // Output: 20
